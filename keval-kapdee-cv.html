@@ -21,6 +21,11 @@
             max-width: 900px;
         }
 
+        header {
+            border-bottom: 2px solid #20B000;
+            padding: 10px 0;
+        }
+
         h1, h3 {
             margin: 0;
             font-family: "Montserrat", "Roboto", sans-serif;
@@ -37,8 +42,6 @@
 
         .main-content {
             padding-top: 10px;
-            display: grid;
-            grid-row-gap: 30px;
         }
 
         .bio {
@@ -46,14 +49,15 @@
         }
 
         .info {
-            display: grid;
-            grid-template-columns: 0.05fr auto 0.05fr auto;
-            grid-row-gap: 10px;
-            grid-column-gap: 2%;
             padding: 10px 15px;
             background-color: #f0f0f0;
             text-decoration: none;
             color: black;
+            width: 100%
+        }
+
+        .info tr .icon {
+            text-align: center;
         }
 
         .info i {
@@ -84,68 +88,92 @@
             font-style: italic;
         }
 
-        .skill-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(15%, 1fr));
-            grid-gap: 20px;
+        table {
+            border-collapse: separate;
+            border-spacing: 1em 1em;
         }
 
-        .skill-container div {
+        .skill-container {
+            width: 100%;
+        }
+
+        .skill-container tr td {
+            width: 20%;
+        }
+
+        .skill-container tr td {
             padding: 5px;
             background-color: #20B000;
             border-radius: 10px;
             text-align: center;
         }
 
-        .grades-grid {
-            display: grid;
-            grid-template-columns: auto auto;
-            justify-content: start;
-            column-gap: 15px;
-            margin: 8px 0 0;
+        .page {
+            background: white;
+            width: 21cm;
+            height: 29.6cm;
+            display: block;
+            padding: 0.5in;
+            /* padding: 1in; */
+            margin: 0 auto 0.5cm;
+            /* box-shadow: 0 0 0.5cm rgba(0,0,0,0.5); */
+            page-break-after: always;
         }
     </style>
 </head>
 <body>
-<header>
-    <h1>Keval Kapdee</h1>
-</header>
-<hr>
-<div class="main-content">
+<div class="page">
+    <header>
+        <h1>Keval Kapdee</h1>
+    </header>
+    <br>
     <div class="bio">
         I am an enthusiastic and hard-working Computer Science student. I am passionate about all forms of tech
         including game development, UI development, cyber security and IoT. Being detail-oriented means that my code
         is reliable and my problem solving skills are well tuned. Thanks to my leadership experience in team
         scenarios, I work well with others even when under pressure due to time constraints.
     </div>
-    <div class="info">
-        <i class="fas fa-envelope"></i>
-        <a href="mailto:keval@kapdee.uk">keval@kapdee.uk</a>
-        <i class="fas fa-phone"></i>
-        <a></a>
-        <i class="fas fa-map-marker-alt"></i>
-        <a>London, UK</a>
-        <i class="fas fa-globe"></i>
-        <a href="https://kapdee.uk">kapdee.uk</a>
-        <i class="fab fa-github"></i>
-        <a href="https://github.com/keval6b">keval6b</a>
-        <i class="fab fa-stack-overflow"></i>
-        <a href="">keval6b</a>
-    </div>
+    <br>
+    <table class="info">
+        <tr>
+            <td class="icon"><i class="fas fa-envelope"></i></td>
+            <td><a href="mailto:keval@kapdee.uk">keval@kapdee.uk</a></td>
+            <td class="icon"><i class="fas fa-phone"></i></td>
+            <td><a></a></td>
+        </tr>
+        <tr>
+            <td class="icon"><i class="fas fa-map-marker-alt"></i></td>
+            <td><a>London, UK</a></td>
+            <td class="icon"><i class="fas fa-globe"></i></td>
+            <td><a href="https://kapdee.uk">kapdee.uk</a></td>
+        </tr>
+        <tr>
+            <td class="icon"><i class="fab fa-github"></i></td>
+            <td><a href="https://github.com/keval6b">keval6b</a></td>
+            <td class="icon"><i class="fab fa-stack-overflow"></i></td>
+            <td><a href="">keval6b</a></td>
+        </tr>
+    </table>
+    <br>
     <div class="skills">
         <h2>Technical Skills</h2>
-        <div class="skill-container">
-            <div>Java</div>
-            <div>C#</div>
-            <div>C/C++</div>
-            <div>Web</div>
-            <div>Git</div>
-            <div>Gradle</div>
-            <div>Linux</div>
-            <div>Unity 3D</div>
-            <div>LibGDX</div>
-        </div>
+        <table class="skill-container">
+            <tr>
+                <td>Java</td>
+                <td>C#</td>
+                <td>C/C++</td>
+                <td>Web</td>
+                <td>Git</td>
+            </tr>
+            <tr>
+                <td>Gradle</td>
+                <td>Linux</td>
+                <td>Unity 3D</td>
+                <td>LibGDX</td>
+            </tr>
+        </table>
     </div>
+    <br>
     <div class="experience">
         <h2>Experience</h2>
         <div class="item-container">
@@ -165,7 +193,8 @@
                     <li>Worked in a team environment under heavy time constrains.</li>
                     <li>Learnt the value of smart time management.</li>
                     <li>Learnt how to deal with setbacks having lost a member of the dev team half way
-                    though the competition.</li>
+                        though the competition.
+                    </li>
                     <li>Despite setbacks, I aided the team in producing a top 25% submission.</li>
                 </ul>
             </div>
@@ -176,10 +205,11 @@
                     <li>Worked with a team to produce a product in less than 48 hours.</li>
                     <li>Led the team to produce a submission in the top 25%.</li>
                     <li>As this was my first experience working in a team under time constraints I had to learn to
-                        let go of my perfectionism.</li>
+                        let go of my perfectionism.
+                    </li>
                 </ul>
             </div>
-<!--            TODO Cyber security thing-->
+            <!--            TODO Cyber security thing-->
             <div class="item">
                 <h3>Independent Android App Development</h3>
                 <span class="date">2018</span>
@@ -190,6 +220,9 @@
             </div>
         </div>
     </div>
+    <br>
+</div>
+<div class="page">
     <div id="education">
         <h2>Education</h2>
         <div class="item-container">
@@ -203,22 +236,29 @@
             <div class="item">
                 <h3>A-Levels | <i>Merchant Taylors' School Northwood</i></h3>
                 <span class="date">2017-2019</span>
-                <p class="grades-grid">
-                    <span>Computer Science</span>
-                    <span>A</span>
-                    <span>Mathematics</span>
-                    <span>A</span>
-                    <span>Physics</span>
-                    <span>B</span>
-                </p>
+                <table>
+                    <tr>
+                        <td>Computer Science</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td>Mathematics</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td>Physics</td>
+                        <td>B</td>
+                    </tr>
+                </table>
             </div>
         </div>
     </div>
+    <br>
     <div id="references">
         <h2>References</h2>
         <div class="item-container">
             <div class="item">
-                <h3>Jeremie Clos</h3>
+                <h3>Jeremie Clos - University Tutor</h3>
                 <ul>
                     Email: <a href="mailto:jeremie.clos@nottingham.ac.uk">jeremie.clos@nottingham.ac.uk</a>
                 </ul>
