@@ -32,6 +32,12 @@ _2017-2020_
 - Implemented complex algorithms including Artificial Intelligence for NPCs and Procedural Generation.
 - Worked with concurrency and time complexity optimisation.
 - Released a fully functioning game to [itch.io](https://keval.kapdee.uk).
+
+### Hack Notts 2019
+_2019_
+
+- Created a discord bot that fetches module scores to save time and reduce suspense.
+- Worked in a duo with a working prototype by the end of the allotted time.
  
 ### GMTK Game Jam
 _2019_
@@ -60,6 +66,22 @@ _2017-2019_
 - Computing - A
 - Mathematics - A
 - Physics - B
+
+## Skills
+
+### Languages
+
+- Java
+- C++
+- JavaScript
+- C#
+
+### Systems
+
+- Flutter
+- Libgdx
+- Unity 3D
+- Android
 
 ## References
 
