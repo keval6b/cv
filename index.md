@@ -8,13 +8,13 @@ An enthusiastic and hard-working Computer Science student.
 Passionate about many fields of Computer Science including Game Development, IoT and Cyber Security. 
 Has well tuned problem solving skills and works well with others, even when under pressure.
 
-
 ## Contact
 
 - Email - [keval@kapdee.uk](mailto:keval@kapdee.uk)
 - Phone - [](tel:)
-- Github - [keval6b](https://github.com/keval6b)
-- Website - [kapdee.uk](https://kapdee.uk)
+- Website - [keval.kapdee.uk](https://keval.kapdee.uk)
+- GitHub - [keval6b](https://github.com/keval6b)
+- GitLab - [git.kapdee.uk/keval](https://git.kapdee.uk/keval)
 
 ## Experience
 
@@ -24,6 +24,7 @@ _2020_
 - Built and deployed a cross-platform mobile app with accompanying back-end infrastructure.
 - Utilised an Agile development cycle to deliver exactly what the client wanted with minimal wasted time.
 - Learnt to translate requirements efficiently and accurately to designs and code.
+- Beta access available on request.
 
 ### Independent Game Development
 _2017-2020_
@@ -31,7 +32,7 @@ _2017-2020_
 - Learnt how to contribute to open source projects such as LibGDX and proper practices.
 - Implemented complex algorithms including Artificial Intelligence for NPCs and Procedural Generation.
 - Worked with concurrency and time complexity optimisation.
-- Released a fully functioning game to [itch.io](https://keval.kapdee.uk).
+- Released a full game to [itch.io](https://keval.kapdee.uk).
 
 ### Hack Notts 2019
 _2019_
@@ -67,12 +68,13 @@ _2017-2019_
 - Mathematics - A
 - Physics - B
 
-## Skills
+## Technical Skills
 
 ### Languages
 
 - Java
 - C++
+- Rust
 - JavaScript
 - C#
 
@@ -82,6 +84,18 @@ _2017-2019_
 - Libgdx
 - Unity 3D
 - Android
+- Gradle
+- Git
+- GitLab
+- Github
+
+## Interests
+
+### Rock Climbing
+
+- Goes regularly both at university and home.
+- Member of the University of Nottingham Climbing Society.
+- Continuously learning to persevere when challenged.
 
 ## References
 
