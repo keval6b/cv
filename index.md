@@ -13,8 +13,6 @@ Has well tuned problem solving skills and works well with others, even when unde
 - Email - [keval@kapdee.uk](mailto:keval@kapdee.uk)
 - Phone - [](tel:)
 - Website - [keval.kapdee.uk](https://keval.kapdee.uk)
-- GitHub - [keval6b](https://github.com/keval6b)
-- GitLab - [git.kapdee.uk/keval](https://git.kapdee.uk/keval)
 
 ## Experience
 
@@ -32,7 +30,7 @@ _2017-2020_
 - Learnt how to contribute to open source projects such as LibGDX and proper practices.
 - Implemented complex algorithms including Artificial Intelligence for NPCs and Procedural Generation.
 - Worked with concurrency and time complexity optimisation.
-- Released a full game to [itch.io](https://keval.kapdee.uk).
+- Released a full game on [itch.io](https://keval.kapdee.uk).
 
 ### Hack Notts 2019
 _2019_
