@@ -71,11 +71,11 @@ _Aug 2018_
 
 ### Languages
 
-Java, C++, Rust, JavaScript, C#
+Java, C++, Rust, JavaScript, C#, PHP, HTML, CSS
 
 ### Systems
 
-Flutter, Libgdx, Unity 3D, Android, Gradle, Git, GitLab, GitHub
+Flutter, Libgdx, Unity 3D, Android, Gradle, Git, GitLab, GitHub, JetBrains IntelliJ
 
 ## Interests
 
