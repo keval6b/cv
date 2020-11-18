@@ -2,11 +2,13 @@
 title: Keval Kapdee
 ...
 
-## About
+## About Me
 
-An enthusiastic and hard-working Computer Science student.
-Passionate about many fields of Computer Science including Game Development, IoT and Cyber Security. 
-Has well tuned problem solving skills and works well with others, even when under pressure.
+I am an enthusiastic and hard-working Computer Science student. 
+My interests include Cyber Security, IoT and Game Development. 
+In regard to Cyber Security, I regularly attempt rooms on [TryHackMe](https://tryhackme.com) which allows me to constantly improve my understanding of the threat and vulnerability landscapes.
+As well as that, I often find myself developing cool game mechanics in my spare time.
+I am constantly building upon my understanding of software and hardware.
 
 ## Contact
 
