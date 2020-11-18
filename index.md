@@ -4,7 +4,7 @@ title: Keval Kapdee
 
 ## About Me
 
-I am an enthusiastic and hard-working Computer Science student. 
+I am an enthusiastic and hard-working Computer Science student currently looking for a year long placement (2021). 
 My interests include Cyber Security, IoT and Game Development. 
 In regard to Cyber Security, I regularly attempt rooms on [TryHackMe](https://tryhackme.com) which allows me to constantly improve my understanding of the threat and vulnerability landscapes.
 As well as that, I often find myself developing cool game mechanics in my spare time.
@@ -15,6 +15,7 @@ I am constantly building upon my understanding of software and hardware.
 - Email - [keval@kapdee.uk](mailto:keval@kapdee.uk)
 - Phone - [](tel:)
 - Website - [keval.kapdee.uk](https://keval.kapdee.uk)
+- Open Source Project Repositories - [GitLab](https://git.kapdee.uk)
 
 ## Education
 
@@ -58,6 +59,7 @@ _Jan 2017 - Jun2020_
 - Implemented a custom A* pathfinding algorithm and recursive maze generation algorithm.
 - Used the long-standing LibGDX platform as a framework while also contributing to it.
 - Released a full game on [itch.io](https://keval.kapdee.uk).
+- Has also been open-sourced (code can be found on my gitlab linked above)
 
 ### Hack Notts 2019
 _Nov 2019_
@@ -102,8 +104,4 @@ _Aug 2019_
 
 ## References
 
-### Jeremie Clos - University Tutor
-- Email - [jeremie.clos@nottingham.ac.uk](mailto:jeremie.clos@nottingham.ac.uk)
-
-### Cameron Iggulden - Director, Manta Group Ltd.
-- Email - [igguldenc@hotmail.co.uk](mailto:igguldenc@hotmail.co.uk)
+Available on request
