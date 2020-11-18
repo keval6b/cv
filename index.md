@@ -4,7 +4,7 @@ title: Keval Kapdee
 
 ## About
 
-An enthusiastic and hard-working Computer Science student. 
+An enthusiastic and hard-working Computer Science student.
 Passionate about many fields of Computer Science including Game Development, IoT and Cyber Security. 
 Has well tuned problem solving skills and works well with others, even when under pressure.
 
@@ -16,12 +16,16 @@ Has well tuned problem solving skills and works well with others, even when unde
 
 ## Education
 
-### Computer Science Bachelors | University of Nottingham
+### Computer Science Bsc | University of Nottingham | Predicted 1st
 _Sep 2019 - Jun 2023_
 
-- On track for a first class degree.
-- Led the first year group project to obtain a first.
-- Achieved 96% in the first year systems-level programming module. 
+- Programming and Algorithms (1st) - Systems level C programming using pointers and creating data-structures.
+- Computer Fundamentals (1st) - Low level networking and boolean logic.
+- Systems and Architecture (1st) - ARM programming, parallel processing and networking.
+- Math for Computer Science (1st) - Predicates, Propositions, Proofs, etc.
+- Programming Paradigms (1st) - Learning OOP in Java and FP in Haskell.
+- Intro to Software Engineering (1st) - Worked in a team to design, test and code an application.
+- Databases and Interfaces (1st) - Learnt SQL and web design (HTML and CSS).
 
 ### A Levels | Merchant Taylors' School Northwood
 _Sep 2017 - 2019_
@@ -31,25 +35,32 @@ _Sep 2017 - 2019_
 
 ## Experience
 
+### Computer Science Mentor Scheme
+_Sep 2020 - Present_
+
+- Led workshops for the first-years to aid their learning.
+
 ### App Development | Manta Group Ltd.
 _Jul 2020 - Oct 2020_
 
-- Built and deployed a cross-platform mobile app with accompanying back-end infrastructure.
-- Utilised an Agile development cycle to deliver exactly what the client wanted with minimal wasted time.
-- Learnt to translate requirements efficiently and accurately to designs and code.
-- Beta access available on request.
+- Competitive stock prediction app.
+- Employed an iterative development cycle with testers providing regular feedback.
+- Client and Tester feedback directly impacted design and functionality as needed.
+- Project was complete once a pre-determined set of criteria had been met.
+- A strong relationship with the client allowed for quick alterations to UI such as colour and layout changes.
 
-### Independent Game Development
+### Larry's Escape
 _Jan 2017 - Jun2020_
 
-- Learnt how to contribute to open source projects such as LibGDX and proper practices.
-- Implemented complex algorithms including Artificial Intelligence for NPCs and Procedural Generation.
-- Worked with concurrency and time complexity optimisation.
+- Sequel to my A Level project game "Larry's Adventure".
+- Implemented a custom A* pathfinding algorithm and recursive maze generation algorithm.
+- Used the long-standing LibGDX platform as a framework while also contributing to it.
 - Released a full game on [itch.io](https://keval.kapdee.uk).
 
 ### Hack Notts 2019
 _Nov 2019_
 
+- Used NodeJS and GitLab CI to fetch data and send messages over the Discord platform.
 - Created a discord bot that fetches module scores to save time and reduce suspense.
 - Worked in a duo with a working prototype by the end of the allotted time.
  
@@ -57,33 +68,35 @@ _Nov 2019_
 _Aug 2019_
 
 - Worked in a team environment under heavy time constrains.
-- Learnt the value of smart time management.
-- Learnt how to deal with setbacks having lost a team member half-way though the competition.
-- Despite setbacks, aided the team in producing a top 25% submission.
- 
-### Ludum Dare 42 Game Jam
-_Aug 2018_
-
-- Led the team to produce a submission in the top 25% within the 48-hour time constraint.
-- Learnt to let go of perfection in exchange for speed.
+- Adopted smart time management.
+- Despite setbacks, led the team to produce a top 25% submission.
 
 ## Technical Skills
 
 ### Languages
 
-Java, C++, Rust, JavaScript, C#, PHP, HTML, CSS
+- Java, C#
+- C++, C, Rust
+- JavaScript, PHP, HTML, CSS
 
 ### Systems
 
-Flutter, Libgdx, Unity 3D, Android, Gradle, Git, GitLab, GitHub, JetBrains IntelliJ
+- Flutter, Libgdx, Unity 3D, Android
+- Gradle, Git, GitLab, GitHub
+- Linux, Windows
+- IntelliJ, Eclipse, Visual Studio
 
 ## Interests
 
 ### Rock Climbing
 
-- Goes regularly both at university and home.
 - Member of the University of Nottingham Climbing Society.
-- Continuously learning to persevere when challenged.
+- Completed courses including bouldering and lead climbing.
+
+### Competitive Team-based eSports
+
+- Maintaining team skills in stressful environments.
+- Commitment to bi-weekly training and game days.
 
 ## References
 

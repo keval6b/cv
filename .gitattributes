@@ -7,4 +7,5 @@
 /makefile filter=lfs diff=lfs merge=lfs -text
 *.css filter=lfs diff=lfs merge=lfs -text
 *.tex filter=lfs diff=lfs merge=lfs -text
+/Makefile filter=lfs diff=lfs merge=lfs -text
 * !text !filter !merge !diff
