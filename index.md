@@ -7,8 +7,9 @@ title: Keval Kapdee
 I am an enthusiastic and hard-working Computer Science student currently looking for a year long placement (2021). 
 My interests include Cyber Security, IoT and Game Development. 
 In regard to Cyber Security, I regularly attempt rooms on [TryHackMe](https://tryhackme.com) which allows me to constantly improve my understanding of the threat and vulnerability landscapes.
-As well as that, I often find myself developing cool game mechanics in my spare time.
-I am constantly building upon my understanding of software and hardware.
+Similarly, I often challenge my own understanding of software and hardware by creating small projects that I find interesting.
+I would ideally like to go into Game Development since it would nurture my existing passion.
+A Cyber Security role would also be of interest to me given that I am also interested in the topic.
 
 ## Contact
 
@@ -59,21 +60,21 @@ _Jan 2017 - Jun2020_
 - Implemented a custom A* pathfinding algorithm and recursive maze generation algorithm.
 - Used the long-standing LibGDX platform as a framework while also contributing to it.
 - Released a full game on [itch.io](https://keval.kapdee.uk).
-- Has also been open-sourced (code can be found on my gitlab linked above)
+- Has also been open-sourced (found on the GitLab instance linked above).
 
 ### Hack Notts 2019
 _Nov 2019_
 
 - Used NodeJS and GitLab CI to fetch data and send messages over the Discord platform.
 - Created a discord bot that fetches module scores to save time and reduce suspense.
-- Worked in a duo with a working prototype by the end of the allotted time.
+- Worked in a duo, producing a fully functional prototype by the end of the allotted time.
  
 ### GMTK Game Jam
 _Aug 2019_
 
-- Worked in a team environment under heavy time constrains.
+- Worked in a team environment under heavy time constraints.
 - Adopted smart time management.
-- Despite setbacks, led the team to produce a top 25% submission.
+- Despite setbacks, including the loss of a key team member, led the team to produce a top 25% submission.
 
 ## Technical Skills
 
@@ -86,7 +87,8 @@ _Aug 2019_
 ### Systems
 
 - Flutter, Libgdx, Unity 3D, Android
-- Gradle, Git, GitLab, GitHub
+- Git, GitLab, GitHub
+- Gradle, Make, CMake
 - Linux, Windows
 - IntelliJ, Eclipse, Visual Studio
 
@@ -100,6 +102,7 @@ _Aug 2019_
 ### Competitive Team-based eSports
 
 - Maintaining team skills in stressful environments.
+- Adaptation to rapidly changing situations.
 - Commitment to bi-weekly training and game days.
 
 ## References
