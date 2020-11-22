@@ -5,11 +5,13 @@ title: Keval Kapdee
 ## About Me
 
 I am an enthusiastic and hard-working Computer Science student currently looking for a year long placement (2021). 
-My interests include Cyber Security, IoT and Game Development. 
-In regard to Cyber Security, I regularly attempt rooms on [TryHackMe](https://tryhackme.com) which allows me to constantly improve my understanding of the threat and vulnerability landscapes.
-Similarly, I often challenge my own understanding of software and hardware by creating small projects that I find interesting.
+My interests include Cyber Security, IoT and Game Development.
+ 
+I often challenge my own understanding of software and hardware by creating small projects that I find interesting.
+For a similar reason, I regularly attempt rooms on [TryHackMe](https://tryhackme.com) which allows me to constantly improve my understanding of the threat and defensive landscapes.
+
 I would ideally like to go into Game Development since it would nurture my existing passion.
-A Cyber Security role would also be of interest to me given that I am also interested in the topic.
+A Cyber Security role, perhaps red-team, would also be of interest to me since I often find myself wanting to more deeply understand human interactions.
 
 ## Contact
 
