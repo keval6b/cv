@@ -35,7 +35,7 @@ _Sep 2019 - Jun 2023_
 - Databases and Interfaces (1st) - Learnt SQL and web design (HTML and CSS).
 
 ### A Levels | Merchant Taylors' School Northwood
-_Sep 2017 - 2019_
+_Sep 2017 - Jun 2019_
 
 - Computing, Mathematics, Physics
 - AAB
