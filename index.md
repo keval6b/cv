@@ -51,27 +51,25 @@ _Sep 2020 - Present_
 ### App Development | Manta Group Ltd.
 _Jul 2020 - Oct 2020_
 
-- Competitive stock prediction app.
+- Competitive stock prediction app using Flutter and Firebase.
 - Employed an iterative development cycle with testers providing regular feedback.
 - Client and Tester feedback directly impacted design and functionality as needed.
-- Project was complete once a pre-determined set of criteria had been met.
 - A strong relationship with the client allowed for quick alterations to UI such as colour and layout changes.
 
 ### Larry's Escape
 _Jan 2017 - Jun2020_
 
-- Sequel to my A Level project game "Larry's Adventure".
+- Sequel to my A Level project, building on existing foundations and maintaining code.
 - Implemented a custom A* pathfinding algorithm and recursive maze generation algorithm.
 - Used the long-standing LibGDX platform as a framework while also contributing to it.
-- Released a full game on [itch.io](https://keval.kapdee.uk).
-- Has also been open-sourced (found on the GitLab instance linked above).
+- Released a full game on [itch.io](https://keval.kapdee.uk), source code on the GitLab instance linked above. 
 
 ### Hack Notts 2019
 _Nov 2019_
 
 - Used NodeJS and GitLab CI to fetch data and send messages over the Discord platform.
 - Created a discord bot that fetches module scores to save time and reduce suspense.
-- Worked in a duo, producing a fully functional prototype by the end of the allotted time.
+- Worked in a duo, effectively communicating to produce a fully functional prototype by the end of the allotted time.
  
 ### GMTK Game Jam
 _Aug 2019_
@@ -105,7 +103,7 @@ _Aug 2019_
 
 ### Competitive Team-based eSports
 
-- Maintaining team skills in stressful environments.
+- Maintaining team skills in demanding environments.
 - Adaptation to rapidly changing situations.
 - Commitment to bi-weekly training and game days.
 
