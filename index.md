@@ -45,7 +45,8 @@ _Sep 2017 - 2019_
 ### Computer Science Mentor Scheme
 _Sep 2020 - Present_
 
-- Led workshops for the first-years to aid their learning.
+- Leading workshops for the first-years to aid their learning.
+- Communicating and building my network within the university.
 
 ### App Development | Manta Group Ltd.
 _Jul 2020 - Oct 2020_
