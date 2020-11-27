@@ -81,7 +81,7 @@ _Aug 2019_
 ## Technical Skills
 
 - **Languages**: C++, C, Rust, Java, C#, JavaScript, PHP, HTML, CSS
-- **Tools**: Flutter, Libgdx, Unity 3D, Android, Git, GitLab, GitHub, Gradle, Make, CMake, Linux, Windows, IntelliJ, Eclipse, Visual Studio
+- **Tools**: Flutter, Libgdx, Unity 3D, Git, Gradle, CMake, Linux, Windows, IntelliJ
 
 ## Interests
 
