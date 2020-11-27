@@ -4,7 +4,7 @@ title: Keval Kapdee
 
 ## About Me
 
-I am a Computer Science student currently looking for a year long placement (2021). 
+I am a 2nd year Computer Science student currently looking for a one-year placement (2021). 
 My interests include Cyber Security, IoT and Game Development.
  
 I often challenge my own understanding of software and hardware by creating small projects that I find interesting.
