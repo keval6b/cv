@@ -1,25 +1,18 @@
 ---
 title: Keval Kapdee
-...
+---
 
 ## About Me
 
-I am a 2nd year Computer Science student currently looking for a one-year placement (2021). 
-My interests include Cyber Security, IoT and Game Development.
+I am a 2nd year Computer Science student currently looking for a summer internship (2021). 
+My interests include Game Development, IoT and OSS.
  
 I often challenge my own understanding of software and hardware by creating small projects that I find interesting.
-For a similar reason, I regularly attempt rooms on [TryHackMe](https://tryhackme.com) which allows me to constantly improve my understanding of the threat and defensive landscapes.
+For a similar reason, I try to regularly participate in game jams such as Ludum Dare.
 
-I am looking to broaden my range of skills in software development and/or cyber security. 
+I am looking to broaden my range of skills in game development and in general. 
 A placement will further develop and deepen my understanding of the technical landscape.
 With my existing technical skill set and experience in group projects, I believe that I could be an asset to an existing team.
-
-## Contact
-
-- Email - [keval@kapdee.uk](mailto:keval@kapdee.uk)
-- Phone - [](tel:)
-- Website - [keval.kapdee.uk](https://keval.kapdee.uk)
-- Open Source Project Repositories - [GitLab](https://git.kapdee.uk)
 
 ## Education
 
@@ -43,7 +36,7 @@ _Sep 2017 - Jun 2019_
 ## Experience
 
 ### Computer Science Mentor Scheme
-_Sep 2020 - Present_
+_Sep 2020 - June 2021_
 
 - Leading workshops for the first-years to aid their learning.
 - Communicating and building my network within the university.
@@ -57,7 +50,7 @@ _Jul 2020 - Oct 2020_
 - A strong relationship with the client allowed for quick alterations to UI such as colour and layout changes.
 
 ### Larry's Escape
-_Jan 2017 - Jun2020_
+_Jan 2017 - Jun 2020_
 
 - Sequel to my A Level project, building on existing foundations and maintaining code.
 - Implemented a custom A* pathfinding algorithm and recursive maze generation algorithm.
@@ -80,7 +73,7 @@ _Aug 2019_
 
 ## Technical Skills
 
-- **Languages**: C++, C, Rust, Java, C#, JavaScript, PHP, HTML, CSS
+- **Languages**: C++, Rust, Java, C#, JavaScript, Haskell
 - **Tools**: Flutter, Libgdx, Unity 3D, Git, Gradle, CMake, Linux, Windows, IntelliJ
 
 ## Interests
