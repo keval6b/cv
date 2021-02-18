@@ -2,18 +2,6 @@
 title: Keval Kapdee
 ---
 
-## About Me
-
-I am a 2nd year Computer Science student currently looking for a summer internship (2021). 
-My interests include Game Development, IoT and OSS.
- 
-I often challenge my own understanding of software and hardware by creating small projects that I find interesting.
-For a similar reason, I try to regularly participate in game jams such as Ludum Dare.
-
-I am looking to broaden my range of skills in game development and in general. 
-A placement will further develop and deepen my understanding of the technical landscape.
-With my existing technical skill set and experience in group projects, I believe that I could be an asset to an existing team.
-
 ## Education
 
 ### Computer Science Bsc | University of Nottingham | Predicted 1st
