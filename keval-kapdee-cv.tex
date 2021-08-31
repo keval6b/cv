@@ -8,6 +8,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[sfdefault]{noto}
 \usepackage{multicol}
+\usepackage{mathptmx}
 \renewcommand{\familydefault}{\sfdefault}
 
 % The following metadata will show up in the PDF properties
@@ -29,8 +30,7 @@
 % Fix  for "! Undefined control sequence. <recently read> \tightlist",
 % see: https://github.com/osener/markup.rocks/issues/4
 % I have this issue with Pandoc 1.17.2
-\providecommand{\tightlist}{%
-    \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
 % Page number is top right, and it is possible to control the rest of
 % the header.
@@ -48,26 +48,26 @@
 \begin{document}
     \begin{multicols}{2}
         \begin{flushleft}
-            \begin{huge}
-                Keval Kapdee
-            \end{huge}
+            {\fontsize{40}{20}\selectfont Keval Kapdee}
         \end{flushleft}
         \begin{flushright}
             keval@kapdee.uk\\
-            
+            \\
+            \href{https://keval.kapdee.uk}{keval.kapdee.uk}
         \end{flushright}
     \end{multicols}
 
 
     \section{About Me}\label{sec:about-me}
-    I am a 2nd year Computer Science student currently looking for a summer internship (2021).
-    My interests include Game Development, IoT, OSS and Cyber Security\@.
+    I am a 3rd year Computer Science student, currently looking for a graduate position starting around July 2023.
+    My professional interests include Game Development, DevOps and OSS.
 
-    Challenging my own understanding of software and hardware, I like to tinker with small projects that I find interesting.
-    I also try to regularly participate in game jams such as Ludum Dare and complete boxes on TryHackMe.
+    To challenge my understanding of all things tech, I like to tinker on small projects that I find interesting and constructive.
+    I also try to regularly participate with friends in game jams such as Ludum Dare. 
+    Recently I have begun to contribute significantly to open source, be it my own repositories or others.
 
-    I am looking for a placement that will broaden my general technical knowledge and deepen that of my development skill-set.
-    With that and my experience in group projects, I believe that I could be an asset to an existing team.
+    I am looking for a job where I can use my existing skills and also build on top of them.
+    With those skills and experience in group projects, I believe that I could be a strong asset to an existing team.
 
 
     \section{Education}\label{sec:education}
@@ -76,24 +76,15 @@
     \emph{Sep 2019 - Jun 2023}
     \begin{itemize}
         \tightlist
-        \item Programming and Algorithms (1st) - Systems level C programming using pointers and creating data-structures.
+        \item Group Project (1st) - Created a interactive visual model for "Parity Games", achieved the "Best Code" prize out of 30+ teams.
         \item Operating Systems and Concurrency (1st) - C programming with a focus on parallel programming.
+        \item C++ Programming (1st) - Learned and used a provided framework to recreate Larry's Escape (below).
+        \item Programming and Algorithms (1st) - Systems level C programming using pointers and creating data-structures.
         \item Computer Fundamentals (1st) - Low level networking and boolean logic.
         \item Systems and Architecture (1st) - ARM programming, parallel processing and networking.
-        \item Math for Computer Science (1st) - Predicates, Propositions,Proofs, etc.
+        \item Math for Computer Science (1st) - Predicates, Propositions, Proofs, etc.
+        \item Intro to Software Engineering (1st) - Worked in a team to design, test and code an application.
         \item Programming Paradigms (1st) - Learning OOP in Java and FP in Haskell.
-        \item Intro to Software Engineering (1st) - Worked in a team to design,test and code an application.
-        \item Databases and Interfaces (1st) - Learnt SQL and web design (HTML and CSS).
-    \end{itemize}
-
-    \subsection{A Levels | Merchant Taylors' School Northwood}\label{subsec:school}
-    \emph{Sep 2017 - Jun 2019}
-    \begin{itemize}
-        \tightlist
-        \item
-        Computing, Mathematics, Physics
-        \item
-        AAB
     \end{itemize}
 
 
@@ -103,8 +94,9 @@
     \emph{Sep 2020 - June 2021}
     \begin{itemize}
         \tightlist
-        \item Leading workshops for the first-years to aid their learning.
-        \item Communicating and building my network within the university.
+        \item Lead workshops for the first-years to aid their learning.
+        \item Organised social events.
+        \item Communicated and built my network within the university.
     \end{itemize}
 
     \subsection{App Development | Manta Group Ltd.}\label{subsec:manta}
@@ -117,7 +109,7 @@
         \item A strong relationship with the client allowed for quick alterations to UI such as colour and layout changes.
     \end{itemize}
 
-    \subsection{Larry's Escape}\label{subsec:larrys-escape}
+    \subsection{Larry's Escape}\label{subsec:larrys-escape} 
     \emph{Jan 2017 - Jun 2020}
 
     \begin{itemize}
@@ -125,7 +117,7 @@
         \item Sequel to my A Level project, building on existing foundations and maintaining code.
         \item Implemented a custom A* pathfinding algorithm and recursive maze generation algorithm.
         \item Used the long-standing LibGDX platform as a framework while also contributing to it.
-        \item Released a full game on \href{https://keval.kapdee.uk}{itch.io}, source code on the GitLab instance linked above.
+        \item Public release on \href{https://keval.kapdee.uk}{itch.io}, source code on my Gitea instance linked on my website (above).
     \end{itemize}
 
     \subsection{Hack Notts 2019}\label{subsec:hack-notts-2019}
@@ -150,8 +142,8 @@
     \section{Technical Skills}\label{sec:technical}
     \begin{itemize}
         \tightlist
-        \item\textbf{Languages}: C++, Rust, Java, C\#, JavaScript, Haskell
-        \item\textbf{Tools}: Flutter, Libgdx, Unity 3D, Git, Gradle, CMake, Linux, Windows, IntelliJ
+        \item\textbf{Languages}: Rust, Java, C++, C\#, JavaScript, Haskell, Web
+        \item\textbf{Tools}: Git, Linux, Windows, IntelliJ, VSCode, Flutter, Bevy, Libgdx, Unity 3D, Gradle, CMake
     \end{itemize}
 
 
