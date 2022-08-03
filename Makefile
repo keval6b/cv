@@ -1,3 +1,4 @@
-compile:
+compile: clean
 	xelatex keval-kapdee-cv.tex
-	rm *.aux *.log *.out *.fdb_latexmk *.fls *.gz __*
+clean:
+	rm *.pdf *.aux *.log *.out *.fdb_latexmk *.fls *.gz __* || true
