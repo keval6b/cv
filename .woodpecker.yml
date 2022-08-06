@@ -3,9 +3,9 @@ pipeline:
     image: ghcr.io/keval6b/xelatex:main
     commands:
       - make compile
-      - printenv
-      - curl --user "keval:$REGISTRY_TOKEN" --upload-file "keval-kapdee-cv.pdf" "https://git.kapdee.uk/api/packages/keval/generic/cv/latest/keval-kapdee-cv.pdf"
+  push:
+    image: curl
+    commands:
+      - curl --user "keval:$REGISTRY_TOKEN" --upload-file "keval-kapdee-cv.pdf" "https://git.kapdee.uk/api/packages/keval/generic/cv/$CI_BRANCH/keval-kapdee-cv.pdf"
     secrets:
       - registry_token
-    when:
-      branch: main
