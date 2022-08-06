@@ -3,7 +3,7 @@ pipeline:
     image: ghcr.io/keval6b/xelatex:main
     commands:
       - make compile
-      - curl --user "keval:${REGISTRY_TOKEN}" --upload-file "keval-kapdee-cv.pdf" "https://git.kapdee.uk/api/packages/keval/generic/cv/keval-kapdee-cv.pdf"
+      - curl --user "keval:${REGISTRY_TOKEN}" --upload-file "keval-kapdee-cv.pdf" "https://git.kapdee.uk/api/packages/keval/generic/latest/keval-kapdee-cv.pdf"
     secrets:
       - REGISTRY_TOKEN
     when:
