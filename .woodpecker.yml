@@ -4,7 +4,7 @@ pipeline:
     commands:
       - make compile
       - printenv
-      - curl --user "keval:${registry_token}" --upload-file "keval-kapdee-cv.pdf" "https://git.kapdee.uk/api/packages/keval/generic/cv/latest/keval-kapdee-cv.pdf"
+      - curl --user "keval:$REGISTRY_TOKEN" --upload-file "keval-kapdee-cv.pdf" "https://git.kapdee.uk/api/packages/keval/generic/cv/latest/keval-kapdee-cv.pdf"
     secrets:
       - registry_token
     when:
