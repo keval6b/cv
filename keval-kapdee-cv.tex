@@ -1,224 +1,213 @@
-\documentclass[a4paper]{article}
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
 
-\usepackage{hyperref}
-\usepackage{geometry}
-\usepackage{enumitem}
-\usepackage{underscore}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage[sfdefault]{noto}
-\usepackage{multicol}
-\usepackage{mathptmx}
-\renewcommand{\familydefault}{\sfdefault}
+\documentclass[11pt, a4paper]{awesome-cv}
 
-% The following metadata will show up in the PDF properties
-\hypersetup{
-    colorlinks = true,
-    urlcolor=blue,
-    linkcolor=magenta,
-    pdftitle={Keval Kapdee},
-    pdfpagemode = UseNone
-}
+\geometry{left=1.4cm, top=1.5cm, right=1.4cm, bottom=1.5cm}
 
-\geometry{
-    bottom=1.5cm,
-    right=1.5cm,
-    left=1.5cm,
-    top=1.5cm
-}
+\definecolor{awesome}{HTML}{333333}
 
-% Fix  for "! Undefined control sequence. <recently read> \tightlist",
-% see: https://github.com/osener/markup.rocks/issues/4
-% I have this issue with Pandoc 1.17.2
-\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+% \definecolor{sectiondivider}{HTML}{5D5D5D}
 
-% Page number is top right, and it is possible to control the rest of
-% the header.
-\pagestyle{myheadings}
-\thispagestyle{empty}
+\setbool{acvSectionColorHighlight}{false}
 
-\setcounter{secnumdepth}{0}
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
 
-% Don't use monospace font for URLs
-\urlstyle{same}
+\name{Keval Kapdee}{}
+% \position{Computer Science Student}
 
-\parskip=2pt
-\parindent=0pt
+\mobile{}
+\email{keval@kapdee.uk}
+\homepage{keval.kapdee.uk}
+\github{keval6b}
+\linkedin{keval-kapdee}
+
+
+\usepackage{lastpage}
 
 \begin{document}
-\begin{flushright}
-    Email: \href{mailto:keval@kapdee.uk}{keval@kapdee.uk}\\
-    Phone: \\
-    Website: \href{https://keval.kapdee.uk}{keval.kapdee.uk}
-\end{flushright}
 
+\makecvheader
 
-\section{Education}
+\makecvfooter
+{\today}
+{}
+{\thepage\ / \pageref{LastPage}}
 
-\begin{multicols}{2}
-    \subsection{Computer Science with Year in Industry Bsc | University of Nottingham}\label{subsec:uni}
-    \columnbreak
-    \flushright\emph{Sep 2019 - Jun 2023}
-\end{multicols}
-\begin{itemize}
-    \tightlist
-    \item Group Project (1st) - Created a interactive visual model for "Parity Games", awarded the "Best Code" prize out of 30+ teams.
-    \item Operating Systems and Concurrency (1st) - C programming with a focus on parallel programming and scheduling.
-    \item C++ Programming (1st) - Learned and used a provided framework to recreate Larry's Escape (above).
-    \item Programming and Algorithms (1st) - Systems level C programming using pointers and creating data-structures.
-    \item Computer Fundamentals (1st) - Low level networking and boolean logic.
-    \item Systems and Architecture (1st) - ARM programming, parallel processing and networking.
-    \item Math for Computer Science (1st) - Predicates, Propositions, Proofs, etc.
-    \item Intro to Software Engineering (1st) - Worked in a team to design, test and code an arbitrary application.
-    \item Programming Paradigms (1st) - Learning OOP in Java and FP in Haskell.
-\end{itemize}
+\cvsection{Summary}
+\begin{cvparagraph}
 
-\begin{multicols}{2}
-    \subsection{A Levels | Merchant Taylors' School}\label{subsec:uni}
-    \columnbreak
-    \flushright\emph{Sep 2017 - Jun 2019}
-\end{multicols}
-\begin{multicols}{3}
-    \centering
-    {Computing (A)}\\
-    Maths (B)\\
-    Physics (B)
-\end{multicols}
+4th year Computer Science student at the University of Nottingham. Professional experience in DevOps and Tooling. Passionate about the open source community and want to find more ways that it can work for companies. Personal interests in Game Development, and Electronics.
+\end{cvparagraph}
 
-\section{Experience}
+\cvsection{Skills}
+\begin{cvskills}
+    
+    \cvskill
+    {DevOps}
+    {Git, GitLab (extensive in CI/CD), GitHub, AWS, Docker, Kubernetes}
 
-\begin{multicols}{2}
-    \subsection{App Development | Interrealm Studios}
-    \columnbreak
-    \flushright\emph{Aug 2022 - Sep 2022}
-\end{multicols}
-\begin{itemize}
-    \tightlist
-    \item Designed, programmed, launched, and marketed a privacy and security focused Android app called Pinpoint which is designed to let you locate your phone using a free SMS from any other mobile device.
-    \item Available at \href{https://interrealmstudios.com}{interrealmstudios.com}.
-\end{itemize}
+    \cvskill
+    {Platforms}
+    {Linux, Windows}
+    
+    \cvskill
+    {Back-end}
+    {REST APIs, SQL, Firebase}
+    
+    \cvskill
+    {Languages}
+    {Rust, C\#, Python, Kotlin, C/C++, TypeScript}
 
-\begin{multicols}{2}
-    \subsection{Technology Intern | Ocado}
-    \columnbreak
-    \flushright\emph{Sep 2021 - Sep 2022}
-\end{multicols}
-\begin{itemize}
-    \tightlist
-    \item Joined a team of roughly 4 engineers where we used the Reactive Agile working methodology.
-    \item Worked on 9 simultaneous projects, many of which were started during my employment.
-    \item Worked closely with internal hardware teams to create tooling and pipeline automations on AWS cloud infrastructure via GitLab CI/CD.
-    \item Integrated complex third party systems and internal services into my team's projects.
-    \item Personally designed and implemented many efficiency and cost-saving improvements for both end-users and internal developers.
-\end{itemize}
+\end{cvskills}
 
-\begin{multicols}{2}
-    \subsection{App Development | Manta Group Ltd.}
-    \columnbreak
-    \flushright\emph{Jul 2020 - Oct 2020}
-\end{multicols}
-\begin{itemize}
-    \tightlist
-    \item Designed and programmed a competitive stock prediction app using Flutter and Firebase (including Cloud Functions).
-    \item Employed an iterative development cycle with alpha users providing regular feedback.
-    \item Client and user feedback directly impacted design and functionality allowing for rapid improvement iterations.
-    \item Successfuly integrated a 3rd party ticker data provider API with (deliberate) 15 minute delayed data.
-\end{itemize}
+\cvsection{Experience}
+\begin{cventries}
 
-\section{Projects \& Events}
+  \cventry
+    {Interrealm Studios}
+    {App Developer}
+    {London, UK}
+    {Aug 2022 - Sep 2022}
+    {
+      \begin{cvitems}
+        \item Designed, programmed, launched, and marketed a privacy and security focused Android app which is designed to let you locate your phone using a free SMS from any other mobile device.
+        \item Publically available at \href{https://interrealmstudios.com}{interrealmstudios.com}.
+      \end{cvitems}
+    }
 
-\begin{multicols}{2}
-    \subsection{Personal Home Server and Environment}
-    \columnbreak
-    \flushright\emph{2016 - Present}
-\end{multicols}
-\begin{itemize}
-    \tightlist
-    \item Self-hosting numerous applications including a family mailserver, multiple static websites, Gitea with CI/CD, Wireguard VPN and Nextcloud.
-    \item Docker based applications with automated redundant backups.
-    \item Security (penetration tested) and privacy focused system.
-\end{itemize}
+    \cventry
+      {Ocado}
+      {Technology Intern}
+      {Hatfield, UK}
+      {Sep 2021 - Sep 2022}
+      {
+        \begin{cvitems}
+            \item Joined a team of roughly 4 engineers where we used the Reactive Agile working methodology.
+            \item Worked on 9 simultaneous projects, many of which were started during my employment.
+            \item Worked closely with internal hardware teams to create tooling and pipeline automations on AWS cloud infrastructure via GitLab CI/CD.
+            \item Integrated complex third party systems and internal services into my team's projects.
+            \item Personally designed and implemented many efficiency and cost-saving improvements for both end-users and internal developers.
+        \end{cvitems}
+      }
 
-\begin{multicols}{2}
-    \subsection{Larry's Escape}
-    \columnbreak
-    \flushright\emph{Jan 2017 - Jun 2020}
-\end{multicols}
-\begin{itemize}
-    \tightlist
-    \item Sequel to my A Level video game project, building on existing foundations and maintaining code.
-    \item Implemented a custom A* pathfinding algorithm and recursive maze generation algorithm.
-    \item Utilised the LibGDX platform as a framework while also contributing to it.
-    \item Public release on \href{https://keval.kapdee.uk}{itch.io}, source code available on my GitHub (website above).
-\end{itemize}
+      \cventry
+      {Manta Group Ltd.}
+        {App Developer}
+        {London, UK}
+        {Jul 2020 - Oct 2020}
+        {
+          \begin{cvitems}
+            \item Designed and programmed a competitive stock prediction app using Flutter and Firebase (including Cloud Functions).
+            \item Employed an iterative development cycle with alpha users providing regular feedback.
+            \item Client and user feedback directly impacted design and functionality allowing for rapid improvement iterations.
+            \item Successfuly integrated a 3rd party ticker data provider API with (deliberate) 15 minute delayed data.
+          \end{cvitems}
+        }
 
-\begin{multicols}{2}
-    \subsection{Hack Notts 2019}
-    \columnbreak
-    \flushright\emph{Nov 2019}
-\end{multicols}
-\begin{itemize}
-    \tightlist
-    \item Used NodeJS and GitLab CI to fetch data and send messages over the Discord platform.
-    \item Created a discord bot that fetches module scores to save time and reduce suspense.
-    \item Worked in a pair, communicating effectively to produce a fully functional prototype within the 48 hour time frame.
-\end{itemize}
+\end{cventries}
 
-\begin{multicols}{2}
-    \subsection{GMTK Game Jam 2019}
-    \columnbreak
-    \flushright\emph{Aug 2019}
-\end{multicols}
-\begin{itemize}
-    \tightlist
-    \item Worked in a team environment under significant time constraints which necessitated smart time management.
-    \item Despite setbacks, including the loss of a key team member, led the team to produce a top 25\% submission.
-\end{itemize}
+\cvsection{Personal Projects}
+\begin{cventries}
 
+  \cventry
+  {Home Lab}
+    {Personal Home Server and DevOps Environment}
+    {London, UK}
+    {2016 - Present}
+    {
+      \begin{cvitems}
+        \item Self-hosting numerous applications including a family mailserver, multiple static websites, Gitea with CI/CD, Wireguard VPN and Nextcloud.
+        \item Docker based applications with automated redundant backups.
+        \item Security (penetration tested) and privacy focused system.
+      \end{cvitems}
+    }
 
-\section{Volunteering}
+    \cventry
+    {Game Development}
+      {Larry's Escape}
+      {London, UK}
+      {Jan 2017 - Jun 2020}
+      {
+        \begin{cvitems}
+            \item Sequel to my A Level video game project, building on existing foundations and maintaining code.
+            \item Implemented a custom A* pathfinding algorithm and recursive maze generation algorithm.
+            \item Utilised the open source LibGDX game framework while also making contributions to it.
+            \item Publicly released and source code available, links via website above.
+        \end{cvitems}
+      }
 
-\begin{multicols}{2}
-    \subsection{Computer Science Society}
-    \columnbreak
-    \flushright\emph{July 2021 - June 2023}
-\end{multicols}
-\begin{itemize}
-    \tightlist
-    \item General Secretary and EDI Officer over 2 separate years.
-    \item Reched out to multiple potential sponsors and speakers.
-    \item Organised many large events between multiple societies.
-    \item Built a web scraper and Discord bot in Rust, linked by a database to allow automated role assignment.
-    \item Used Docker and GitHub Actions to automatically build and deploy the application to own infrastructure.
-\end{itemize}
+\end{cventries}
 
-\begin{multicols}{2}
-    \subsection{Computer Science Mentor Scheme}
-    \columnbreak
-    \flushright\emph{Sep 2020 - June 2021 \& Sep 2022 - June 2023}
-\end{multicols}
-\begin{itemize}
-    \tightlist
-    \item Organised and ran workshops and events for mentors and mentees.
-    \item Led workshops for the first year university students to aid their learning.
-    \item Organised and ran 15+ social events.
-\end{itemize}
+\clearpage
 
-\section{Interests}
+\cvsection{Volunteering}
+\begin{cventries}
 
-\subsection{Rock Climbing}
-\begin{itemize}
-    \tightlist
-    \item Active member of the University of Nottingham Climbing Society.
-    \item Competed in the Varsity bouldering competition in 2023.
-\end{itemize}
+  \cventry
+  {University of Nottingham Computer Science Society}
+    {General Secretary and EDI Officer}
+    {Nottingham, UK}
+    {July 2021 - June 2023}
+    {
+      \begin{cvitems}
+        \item General Secretary and EDI Officer over 2 separate years.
+        \item Reched out to multiple potential sponsors and speakers.
+        \item Organised many large events between multiple societies.
+        \item Built a web scraper and Discord bot in Rust, linked by a database to allow automated role assignment.
+        \item Used Docker and GitHub Actions to automatically build and deploy the application to own infrastructure.
+      \end{cvitems}
+    }
 
-\subsection{Skiing}
-Passionate skiier, travelling anually.
+    \cventry
+    {University of Nottingham}
+      {Computer Science Mentor}
+      {Nottingham, UK}
+      {2 years between 2020 and 2023}
+      {
+        \begin{cvitems}
+            \item Organised and ran workshops and events for mentors and mentees.
+            \item Led workshops for the first year university students to aid their learning.
+            \item Organised and ran 15+ social events.
+        \end{cvitems}
+      }
 
-\subsection{Piano}
-Achieved a Distinction in Grade 6 ABRSM
+\end{cventries}
 
- \section{References}
+\cvsection{Education}
+\begin{cventries}
+
+  \cventry
+  {University of Nottingham}
+    {Computer Science with Year in Industry Bsc}
+    {Nottingham, UK}
+    {Sep 2019 - Jun 2023}
+    {
+      \begin{cvitems}
+        \item Predicted graduation with a 1st class degree.
+        \item Obtained the "Best Code" prize in the Group Project module.
+      \end{cvitems}
+    }
+
+    \cventry
+    {Merchant Taylors' School}
+      {A Levels}
+      {London, UK}
+      {Sep 2017 - Jun 2019}
+      {
+      Computing (A), Maths (B), Physics (B)
+      }
+
+\end{cventries}
+
+\cvsection{References}
+
 Available on request
+
 \end{document}
