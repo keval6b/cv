@@ -30,6 +30,7 @@
 
 
 \usepackage{lastpage}
+\usepackage{hyperref}
 
 \begin{document}
 
@@ -41,29 +42,39 @@
 {\thepage\ / \pageref{LastPage}}
 
 \cvsection{Summary}
+
 \begin{cvparagraph}
 
-4th year Computer Science student at the University of Nottingham. Professional experience in DevOps and Tooling. Passionate about the open source community and want to find more ways that it can work for companies. Personal interests in Game Development, and Electronics.
+  Fourth-year computer science student at the University of Nottingham, on track for a first-class degree.
+  Professional experience in DevOps and Tooling development with Python, C\#, GitLab CI/CD \& AWS.
+  Passionate about the open source community and have contributed to multiple projects.
+  Personal interests in Self-Hosting, Game Development, and Electronics.
+
 \end{cvparagraph}
 
 \cvsection{Skills}
-\begin{cvskills}
-    
-    \cvskill
-    {DevOps}
-    {Git, GitLab (extensive in CI/CD), GitHub, AWS, Docker, Kubernetes}
 
-    \cvskill
-    {Platforms}
-    {Linux, Windows}
-    
-    \cvskill
-    {Back-end}
-    {REST APIs, SQL, Firebase}
-    
-    \cvskill
-    {Languages}
-    {Rust, C\#, Python, Kotlin, C/C++, TypeScript}
+\begin{cvskills}
+
+  \cvskill
+  {DevOps}
+  {Git, GitLab (extensive in CI/CD), GitHub, AWS, Docker, Kubernetes}
+
+  \cvskill
+  {Platforms}
+  {Linux, Windows, MacOS}
+
+  \cvskill
+  {Backend}
+  {REST APIs, Google Cloud, Firebase, SQL, OpenGL}
+
+  \cvskill
+  {Technologies}
+  {Unity 3D, Flutter, Intellij, VSCode, CMake, Gradle}
+
+  \cvskill
+  {Languages}
+  {Rust, C\#, Python, Kotlin, C/C++, Java, TypeScript, Go, Dart}
 
 \end{cvskills}
 
@@ -71,112 +82,128 @@
 \begin{cventries}
 
   \cventry
-    {Interrealm Studios}
-    {App Developer}
-    {London, UK}
-    {Aug 2022 - Sep 2022}
-    {
-      \begin{cvitems}
-        \item Designed, programmed, launched, and marketed a privacy and security focused Android app which is designed to let you locate your phone using a free SMS from any other mobile device.
-        \item Publically available at \href{https://interrealmstudios.com}{interrealmstudios.com}.
-      \end{cvitems}
-    }
+  {Ocado}
+  {Technology Intern (DevOps \& Tooling)}
+  {Hatfield, UK}
+  {Sep 2021 - Sep 2022}
+  {
+    \begin{cvitems}
+      \item Joined a team of roughly 4 engineers in which we used a Reactive Agile working methodology.
+      \item Worked on 9 simultaneous projects, many of which were started during my employment.
+      \item Collaborated with internal hardware teams to create tooling and pipeline automations on AWS cloud infrastructure via GitLab CI/CD.
+      \item Used AWS Cloud Formation, EC2, and S3 to automatically deploy and manage Windows Server VMs for CI/CD purposes.
+      \item Ported and integrated an internal headless Linux client for Palo Alto Global Protect VPN to Windows for automated external site connections.
+      \item Personally designed and implemented multiple efficiency and cost-saving improvements for both end-users and internal developers.
+      \item Successfully helped train two new team members.
+      \item Provied first line support for multiple products, solving most issues the same day.
+    \end{cvitems}
+  }
 
-    \cventry
-      {Ocado}
-      {Technology Intern}
-      {Hatfield, UK}
-      {Sep 2021 - Sep 2022}
-      {
-        \begin{cvitems}
-            \item Joined a team of roughly 4 engineers where we used the Reactive Agile working methodology.
-            \item Worked on 9 simultaneous projects, many of which were started during my employment.
-            \item Worked closely with internal hardware teams to create tooling and pipeline automations on AWS cloud infrastructure via GitLab CI/CD.
-            \item Integrated complex third party systems and internal services into my team's projects.
-            \item Personally designed and implemented many efficiency and cost-saving improvements for both end-users and internal developers.
-        \end{cvitems}
-      }
+  \cventry
+  {Manta Group Ltd.}
+  {App Developer}
+  {London, UK}
+  {Jul 2020 - Oct 2020}
+  {
+    \begin{cvitems}
+      \item Designed and programmed a competitive stock prediction app using Flutter and Firebase (including Cloud Functions).
+      \item Employed an iterative development cycle with alpha users providing regular feedback.
+      \item Client and user feedback directly impacted design and functionality allowing for rapid improvement iterations.
+      \item Successfuly integrated a 3rd party ticker data provider API with (deliberate) 15 minute delayed data.
+    \end{cvitems}
+  }
 
-      \cventry
-      {Manta Group Ltd.}
-        {App Developer}
-        {London, UK}
-        {Jul 2020 - Oct 2020}
-        {
-          \begin{cvitems}
-            \item Designed and programmed a competitive stock prediction app using Flutter and Firebase (including Cloud Functions).
-            \item Employed an iterative development cycle with alpha users providing regular feedback.
-            \item Client and user feedback directly impacted design and functionality allowing for rapid improvement iterations.
-            \item Successfuly integrated a 3rd party ticker data provider API with (deliberate) 15 minute delayed data.
-          \end{cvitems}
-        }
+  \cventry
+  {Interrealm Studios}
+  {App Developer}
+  {London, UK}
+  {Aug 2022 - Sep 2022}
+  {
+    \begin{cvitems}
+      \item Designed, programmed, launched, and marketed a privacy and security focused Android app which lets you locate your phone using a free SMS from any other mobile device.
+      \item Publically available at \href{https://interrealmstudios.com}{interrealmstudios.com}.
+    \end{cvitems}
+  }
 
 \end{cventries}
 
-\cvsection{Personal Projects}
+\cvsection{Notable Personal Projects}
 \begin{cventries}
 
   \cventry
   {Home Lab}
-    {Personal Home Server and DevOps Environment}
-    {London, UK}
-    {2016 - Present}
-    {
-      \begin{cvitems}
-        \item Self-hosting numerous applications including a family mailserver, multiple static websites, Gitea with CI/CD, Wireguard VPN and Nextcloud.
-        \item Docker based applications with automated redundant backups.
-        \item Security (penetration tested) and privacy focused system.
-      \end{cvitems}
-    }
+  {Personal Home Server and DevOps Environment}
+  {London, UK}
+  {2016 - Present}
+  {
+    \begin{cvitems}
+      \item Self-hosting numerous applications including a family mailserver, multiple static websites, Gitea with CI/CD, Wireguard VPN and Nextcloud.
+      \item Containerized applications with automated redundant backups.
+      \item Currently migrating from Docker to Kubernetes.
+      \item Security (penetration tested) and privacy focused system.
+    \end{cvitems}
+  }
 
-    \cventry
-    {Game Development}
-      {Larry's Escape}
-      {London, UK}
-      {Jan 2017 - Jun 2020}
-      {
-        \begin{cvitems}
-            \item Sequel to my A Level video game project, building on existing foundations and maintaining code.
-            \item Implemented a custom A* pathfinding algorithm and recursive maze generation algorithm.
-            \item Utilised the open source LibGDX game framework while also making contributions to it.
-            \item Publicly released and source code available, links via website above.
-        \end{cvitems}
-      }
+  \cventry
+  {Game Development}
+  {Larry's Escape}
+  {London, UK}
+  {Jan 2017 - Jun 2020}
+  {
+    \begin{cvitems}
+      \item Sequel to my A Level video game project, building on existing foundations and maintaining code.
+      \item Implemented a custom A* pathfinding algorithm and recursive maze generation algorithm.
+      \item Utilised the open source LibGDX game framework while also making contributions to it.
+      \item Publicly released and source code available, links via website above.
+    \end{cvitems}
+  }
+
+  \cventry
+  {GMTK Game Jam}
+  {Pentatech}
+  {London, UK}
+  {Aug 2019}
+  {
+    \begin{cvitems}
+      \item Worked in a team environment under heavy time constraints.
+      \item Adopted smart time management, learning from Ludum Dare the previous year.
+      \item Despite setbacks, including the loss of a key team member, produced a top 25\% submission.
+      \item Publically available on itch.io, link via website above.
+    \end{cvitems}
+  }
 
 \end{cventries}
-
-\clearpage
 
 \cvsection{Volunteering}
 \begin{cventries}
 
   \cventry
   {University of Nottingham Computer Science Society}
-    {General Secretary and EDI Officer}
-    {Nottingham, UK}
-    {July 2021 - June 2023}
-    {
-      \begin{cvitems}
-        \item General Secretary and EDI Officer over 2 separate years.
-        \item Reched out to multiple potential sponsors and speakers.
-        \item Organised many large events between multiple societies.
-        \item Built a web scraper and Discord bot in Rust, linked by a database to allow automated role assignment.
-        \item Used Docker and GitHub Actions to automatically build and deploy the application to own infrastructure.
-      \end{cvitems}
-    }
+  {General Secretary and EDI Officer}
+  {Nottingham, UK}
+  {July 2021 - June 2023}
+  {
+    \begin{cvitems}
+      \item General Secretary and EDI Officer over 2 separate years.
+      \item Reched out to multiple potential sponsors and speakers.
+      \item Organised many large events between multiple societies.
+      \item Built a web scraper and Discord bot in Rust, linked by a database to allow automated role assignment.
+      \item Used Docker and GitHub Actions to automatically build and deploy the application to own infrastructure.
+    \end{cvitems}
+  }
 
-    \cventry
-    {University of Nottingham}
-      {Computer Science Mentor}
-      {Nottingham, UK}
-      {2 years between 2020 and 2023}
-      {
-        \begin{cvitems}
-            \item Organised and ran workshops and events for mentors and mentees.
-            \item Led workshops for the first year university students to aid their learning.
-            \item Organised and ran 15+ social events.
-        \end{cvitems}
-      }
+  \cventry
+  {University of Nottingham}
+  {Computer Science Mentor \& Senior Mentor}
+  {Nottingham, UK}
+  {2 years between 2020 and 2023}
+  {
+    \begin{cvitems}
+      \item Organised and ran workshops and events for mentors and mentees.
+      \item Led workshops for the first year university students to aid their learning.
+      \item Organised and ran 15+ social events.
+    \end{cvitems}
+  }
 
 \end{cventries}
 
@@ -185,29 +212,51 @@
 
   \cventry
   {University of Nottingham}
-    {Computer Science with Year in Industry Bsc}
-    {Nottingham, UK}
-    {Sep 2019 - Jun 2023}
-    {
-      \begin{cvitems}
-        \item Predicted graduation with a 1st class degree.
-        \item Obtained the "Best Code" prize in the Group Project module.
-      \end{cvitems}
-    }
+  {Computer Science with Year in Industry Bsc}
+  {Nottingham, UK}
+  {Sep 2019 - Jun 2023}
+  {
+    \begin{cvitems}
+      \item Predicted graduation with a 1st class degree.
+      \item Obtained the "Best Code" prize in the Group Project module.
+    \end{cvitems}
+  }
 
-    \cventry
-    {Merchant Taylors' School}
-      {A Levels}
-      {London, UK}
-      {Sep 2017 - Jun 2019}
-      {
-      Computing (A), Maths (B), Physics (B)
-      }
+  \cventry
+  {Merchant Taylors' School}
+  {A Levels}
+  {London, UK}
+  {Sep 2017 - Jun 2019}
+  {
+    Computing (A), Maths (B), Physics (B)
+  }
 
 \end{cventries}
 
 \cvsection{References}
 
-Available on request
+\begin{cventries}
+
+\cventry
+  {Barry Durnin}
+  {Team Lead at Ocado}
+  {London, UK}
+  {}
+  {
+    \href{mailto:barry.durnin@ocado.com}{barry.durnin@ocado.com}
+  }
+
+  \cventry
+  {}
+  {}
+  {}
+  {}
+  {
+    More references available on request
+  }
+
+
+
+\end{cventries}
 
 \end{document}
