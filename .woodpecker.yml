@@ -10,3 +10,5 @@ pipeline:
       - curl --user "keval:$REGISTRY_TOKEN" --upload-file "keval-kapdee-cv.pdf" "https://git.kapdee.uk/api/packages/keval/generic/cv/latest/keval-kapdee-cv.pdf"
     secrets:
       - registry_token
+
+branches: main
