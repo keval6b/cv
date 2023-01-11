@@ -172,21 +172,20 @@
 %-------------------------------------------------------------------------------
 % Configure styles for each CV elements
 % For fundamental structures
-\newcommand*{\headerfirstnamestyle}[1]{{\fontsize{32pt}{1em}\headerfontlight\color{graytext} #1}}
-\newcommand*{\headerlastnamestyle}[1]{{\fontsize{32pt}{1em}\headerfont\bfseries\color{text} #1}}
+\newcommand*{\headernamestyle}[1]{{\fontsize{28pt}{1em}\headerfontlight\color{graytext} #1}}
 \newcommand*{\headerpositionstyle}[1]{{\fontsize{7.6pt}{1em}\bodyfont\scshape\color{awesome} #1}}
 \newcommand*{\headeraddressstyle}[1]{{\fontsize{8pt}{1em}\headerfont\itshape\color{lighttext} #1}}
 \newcommand*{\headersocialstyle}[1]{{\fontsize{6.8pt}{1em}\headerfont\color{text} #1}}
 \newcommand*{\headerquotestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\itshape\color{darktext} #1}}
 \newcommand*{\footerstyle}[1]{{\fontsize{8pt}{1em}\footerfont\scshape\color{lighttext} #1}}
-\newcommand*{\sectionstyle}[1]{{\fontsize{16pt}{1em}\bodyfont\bfseries\color{text}\@sectioncolor #1}}
+\newcommand*{\sectionstyle}[1]{{\fontsize{15pt}{1em}\bodyfont\bfseries\color{text}\@sectioncolor #1}}
 \newcommand*{\subsectionstyle}[1]{{\fontsize{12pt}{1em}\bodyfont\scshape\textcolor{text}{#1}}}
 \newcommand*{\paragraphstyle}{\fontsize{9pt}{1em}\bodyfontlight\upshape\color{text}}
 
 % For elements of entry
 \newcommand*{\entrytitlestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
 \newcommand*{\entrypositionstyle}[1]{{\fontsize{8pt}{1em}\bodyfont\scshape\color{graytext} #1}}
-\newcommand*{\entrydatestyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\slshape\color{graytext} #1}}
+\newcommand*{\entrydatestyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\slshape\color{darktext} #1}}
 \newcommand*{\entrylocationstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\slshape\color{awesome} #1}}
 \newcommand*{\descriptionstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\upshape\color{text} #1}}
 
@@ -239,15 +238,8 @@
 \def\@photoalign{left}
 
 % Define writer's name
-% Usage: \name{<firstname>}{<lastname>}
-% Usage: \firstname{<firstname>}
-% Usage: \lastname{<lastname>}
-% Usage: \familyname{<familyname>}
-\newcommand*{\name}[2]{\def\@firstname{#1}\def\@lastname{#2}}
-\newcommand*{\firstname}[1]{\def\@firstname{#1}}
-\newcommand*{\lastname}[1]{\def\@lastname{#1}}
-\newcommand*{\familyname}[1]{\def\@lastname{#1}}
-\def\@familyname{\@lastname}
+% Usage: \name{<name>}
+\newcommand*{\name}[1]{\def\@name{#1}}
 
 % Define writer's address
 % Usage: \address{<address>}
@@ -331,21 +323,6 @@
 % Usage: \kaggle{<kaggle handle>}
 \newcommand*{\kaggle}[1]{\def\@kaggle{#1}}
 
-% Defines writer's google scholar profile (optional)
-% Usage: \googlescholar{<googlescholar userid>}{<googlescholar username>}
-% e.g.https://scholar.google.co.uk/citations?user=wpZDx1cAAAAJ
-% would be \googlescholar{wpZDx1cAAAAJ}{Name-to-display-next-icon}
-% If 'googlescholar-name' is not provided than it defaults to
-% '\firstname \lastname'
-\newcommand*{\googlescholar}[2]{%
-  \def\@googlescholarid{#1}%
-  \ifthenelse{\equal{#2}{}}{%
-    \def\@googlescholarname{\@firstname~\@lastname}%
-  }{%
-    \def\@googlescholarname{#2}%
-  }%
-}
-
 % Defines writer's extra information (optional)
 % Usage: \extrainfo{<extra information>}
 \newcommand*{\extrainfo}[1]{\def\@extrainfo{#1}}
@@ -403,7 +380,7 @@
 \newcommand{\acvHeaderAfterQuoteSkip}{5mm}
 
 % Others
-\newcommand{\acvSectionTopSkip}{3mm}
+\newcommand{\acvSectionTopSkip}{1mm}
 \newcommand{\acvSectionContentTopSkip}{2.5mm}
 
 
@@ -456,7 +433,7 @@
   \end{minipage}
   \begin{minipage}[c]{\headertextwidth}
     \ifthenelse{\equal{#1}{L}}{\raggedright}{\ifthenelse{\equal{#1}{R}}{\raggedleft}{\centering}}
-    \headerfirstnamestyle{\@firstname}\headerlastnamestyle{{}\acvHeaderNameDelim\@lastname}%
+    \headernamestyle{\@name}
     \\[\acvHeaderAfterNameSkip]%
     \ifthenelse{\isundefined{\@position}}{}{\headerpositionstyle{\@position\\[\acvHeaderAfterPositionSkip]}}%
     \ifthenelse{\isundefined{\@address}}{}{\headeraddressstyle{\@address\\[\acvHeaderAfterAddressSkip]}}%
@@ -572,12 +549,6 @@
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
           \href{https://kaggle.com/\@kaggle}{\faKaggle\acvHeaderIconSep\@kaggle}%
         }%
-      \ifthenelse{\isundefined{\@googlescholarid}}%
-        {}%
-        {%
-          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-          \href{https://scholar.google.com/citations?user=\@googlescholarid}{\faGraduationCap\acvHeaderIconSep\@googlescholarname}%
-        }%
       \ifthenelse{\isundefined{\@extrainfo}}%
         {}%
         {%
@@ -639,17 +610,14 @@
   \end{center}
 }
 % Define an entry of cv information
-% Usage: \cventry{<position>}{<title>}{<location>}{<date>}{<description>}
-\newcommand*{\cventry}[5]{%
+% Usage: \cventry{<title>}{<date>}{<description>}
+\newcommand*{\cventry}[3]{%
   \vspace{-2.0mm}
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
-    \ifempty{#2#3}
-      {\entrypositionstyle{#1} & \entrydatestyle{#4} \\}
-      {\entrytitlestyle{#2} & \entrylocationstyle{#3} \\
-      \entrypositionstyle{#1} & \entrydatestyle{#4} \\}
-    \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}}
+    \entrytitlestyle{#1} & \entrydatestyle{#2} \\
+    \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#3}}
   \end{tabular*}%
 }
 
@@ -724,57 +692,4 @@
   \end{itemize}
   \end{justify}
   \vspace{-4.0mm}
-}
-
-
-%-------------------------------------------------------------------------------
-%                Commands for elements of Cover Letter
-%-------------------------------------------------------------------------------
-% Define an environment for cvletter
-\newenvironment{cvletter}{%
-  \lettertextstyle
-}{%
-}
-
-% Define a section for the cover letter
-% Usage: \lettersection{<section-title>}
-\newcommand{\lettersection}[1]{%
-  \par\addvspace{2.5ex}
-  \phantomsection{}
-  \lettersectionstyle{#1}
-  \color{sectiondivider}\vhrulefill{0.9pt}
-  \par\nobreak\addvspace{0.4ex}
-  \lettertextstyle
-}
-
-% Define a title of the cover letter
-% Usage: \makelettertitle
-\newcommand*{\makelettertitle}{%
-  \vspace{8.4mm}
-  \setlength\tabcolsep{0pt}
-  \setlength{\extrarowheight}{0pt}
-  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
-    \recipienttitlestyle{\@recipientname} & \letterdatestyle{\@letterdate}
-  \end{tabular*}
-  \begin{singlespace}
-    \recipientaddressstyle{\@recipientaddress} \\\\
-  \end{singlespace}
-  \ifthenelse{\isundefined{\@lettertitle}}
-    {}
-    {\lettertitlestyle{\@lettertitle} \\}
-  \lettertextstyle{\@letteropening}
-}
-
-% Define a closing of the cover letter
-% Usage: \makeletterclosing
-\newcommand*{\makeletterclosing}{%
-  \vspace{3.4mm}
-  \lettertextstyle{\@letterclosing} \\\\
-  \letternamestyle{\@firstname\ \@lastname}
-  \ifthenelse{\isundefined{\@letterenclosure}}
-    {\\}
-    {%
-      \\\\\\
-      \letterenclosurestyle{\@letterenclname: \@letterenclosure} \\
-    }
 }
