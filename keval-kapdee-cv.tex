@@ -3,13 +3,23 @@
 
 \documentclass[11pt, a4paper]{awesome-cv}
 
-\geometry{left=0.8cm, top=0.8cm, right=0.8cm, bottom=0.8cm}
+\geometry{left=1.2cm, top=1.2cm, right=1.2cm, bottom=1.5cm}
 
-\setbool{acvSectionColorHighlight}{false}
+\definecolor{awesome}{HTML}{379f33}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+% \definecolor{sectiondivider}{HTML}{5D5D5D}
+
+\setbool{acvSectionColorHighlight}{true}
 
 \renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
 
-\name{Keval Kapdee}{}
+\name{Keval}{Kapdee}
 % \position{Computer Science Student}
 
 \mobile{}
@@ -23,157 +33,164 @@
 
 \begin{document}
 
-\makecvheader
+    \makecvheader
 
-\cvsection{Summary}
+    %! suppress = UnresolvedReference
+    \makecvfooter
+    {\today}
+    {}
+    {\thepage\ /~\pageref{LastPage}}
 
-\begin{cvparagraph}
+    \cvsection{Summary}
 
-  Final year computer science student at the University of Nottingham, on track for a first-class degree.
-  Professional experience in DevOps and Tooling development with Python, C\#, GitLab CI/CD \& AWS\@.
-  Passionate about the open source community and have contributed to multiple projects.
-  Personal interests in Self-Hosting, Game Programming, and Electronics.
+    \begin{cvparagraph}
 
-\end{cvparagraph}
+        Final year computer science student at the University of Nottingham, on track for a first-class degree.
+        Enthusiastic and hardworking, with a main passion in the DevOps field looking to expand my experience in the real world.
+        Past professional experience in DevOps and Tooling development using Python, C\#, GitLab CI/CD \& AWS\@.
+        Passionate about the open source community, having contributed to a few of my favourite projects.
+        Personal interests in Self-Hosting, Game Programming, and Electronics.
 
-\cvsection{Experience}
+    \end{cvparagraph}
 
-\begin{cventries}
+    \cvsection{Experience}
 
-  \cventry
-  {DevOps \& Tooling Engineer (Technology Intern) @ Ocado Technology}
-  {Sep 2021 - Sep 2022}
-  {
-    \begin{cvitems}
-      \item Designed and implemented a replacement AWS EC2 launch system which simplified the department's pipelines, saving time and money.
-      \item Ported and integrated an internal headless Linux client for Palo Alto Global Protect VPN to Windows for automated external site connections.
-      \item Collaborated with internal hardware teams to design and implement tooling to automatically deploy proprietary projects across the globe.
-      \item Containerized a DotNet application and created pipelines (Bash \& Python) to automatically deploy it to the internal Kubernetes host.
-      \item Provided first line support for GitLab pipelines and tools (Python and C\#), solving most issues the same day.
-    \end{cvitems}
-  }
+    \begin{cventries}
 
-  \cventry
-  {App Developer (Contract) @ Manta Group Ltd.}
-  {Jul 2020 - Oct 2020}
-  {
-    \begin{cvitems}
-      \item Designed and fully implemented a competitive stock prediction app using Flutter and Firebase (including Cloud Functions).
-      \item Client and user feedback directly impacted design and functionality allowing for rapid iterations and timely delivery.
-      \item Successfully integrated a 3rd party ticker data provider API with (deliberate) 15 minute delayed data.
-    \end{cvitems}
-  }
+        \cventry
+        {DevOps \& Tooling Engineer (Technology Intern) @ Ocado Technology}
+        {Sep 2021 - Sep 2022}
+        {
+            \begin{cvitems}
+                \item Designed and implemented a replacement AWS EC2 launch system which simplified the department's pipelines, saving time and money.
+                \item Ported and integrated an internal headless Linux client for Palo Alto Global Protect VPN to Windows for automated external site connections.
+                \item Collaborated with internal hardware teams to design and implement tooling to automatically deploy proprietary projects across the globe.
+                \item Containerized a DotNet application and created pipelines (Bash \& Python) to automatically deploy it to the internal Kubernetes host.
+                \item Provided first line support for GitLab pipelines and tools (Python and C\#), solving most issues the same day.
+            \end{cvitems}
+        }
 
-\end{cventries}
+        \cventry
+        {App Developer (Contract) @ Manta Group Ltd.}
+        {Jul 2020 - Oct 2020}
+        {
+            \begin{cvitems}
+                \item Designed and fully implemented a competitive stock prediction app using Flutter and Firebase (including Cloud Functions).
+                \item Client and user feedback directly impacted design and functionality allowing for rapid iterations and timely delivery.
+                \item Successfully integrated a 3rd party ticker data provider API with (deliberate) 15 minute delayed data.
+            \end{cvitems}
+        }
 
-\cvsection{Education}
+    \end{cventries}
 
-\begin{cventries}
+    \cvsection{Education}
 
-  \cventry
-  {Computer Science with Year in Industry Bsc @ University of Nottingham}
-  {Sep 2019 - Jun 2023}
-  {
-    \begin{cvitems}
-      \item Predicted graduation with a 1st class degree.
-      \item Received the ``Best Code'' prize in the Group Project module, competing with 30+ teams.
-      Built a ``Parity Game'' visualisation written in Java.
-      My role was Git Admin but I worked on all aspects of the project.
-    \end{cvitems}
-  }
+    \begin{cventries}
 
-  \cventry
-  {A Levels @ Merchant Taylors' School}
-  {Sep 2017 - Jun 2019}
-  {
-    Computing (A), Maths (A), Physics (B)
-  }
+        \cventry
+        {Computer Science with Year in Industry Bsc @ University of Nottingham}
+        {Sep 2019 - Jun 2023}
+        {
+            \begin{cvitems}
+                \item Predicted graduation with a 1st class degree.
+                \item Received the ``Best Code'' prize in the Group Project module, competing with 30+ teams.
+                Built a ``Parity Game'' visualisation written in Java.
+                My role was Git Admin but I worked on all aspects of the project.
+            \end{cvitems}
+        }
 
-\end{cventries}
+        \cventry
+        {A Levels @ Merchant Taylors' School}
+        {Sep 2017 - Jun 2019}
+        {
+            Computing (A), Maths (A), Physics (B)
+        }
 
-\cvsection{Notable Personal Projects}
+    \end{cventries}
 
-\begin{cventries}
+    \cvsection{Notable Personal Projects}
 
-  \cventry
-  {Personal Home Server and DevOps Environment}
-  {2016 - Present}
-  {
-    \begin{cvitems}
-      \item Self-hosting numerous applications including a family mail server, multiple static websites, Gitea with CI/CD, Wireguard VPN and Nextcloud.
-      \item Containerized applications (currently migrating from Docker to Kubernetes) with automated redundant backups.
-    \end{cvitems}
-  }
+    \begin{cventries}
 
-  \cventry
-  {Founder \& App Developer @ Interrealm Studios}
-  {Aug 2022 - Sep 2022}
-  {
-    \begin{cvitems}
-      \item Designed, programmed, launched, and marketed a privacy and security focused Android app using Kotlin and Jetpack Compose which lets you locate your phone using an SMS from any other mobile device.
-      \item Publicly available at \href{https://interrealmstudios.com}{interrealmstudios.com} with 50+ downloads.
-    \end{cvitems}
-  }
+        \cventry
+        {Personal Home Server and DevOps Environment}
+        {2016 - Present}
+        {
+            \begin{cvitems}
+                \item Self-hosting numerous applications including a family mail server, multiple static websites, Gitea with CI/CD, Wireguard VPN and Nextcloud.
+                \item Containerized applications (currently migrating from Docker to Kubernetes) with automated redundant backups.
+            \end{cvitems}
+        }
 
-  \cventry
-  {Game Development: Larry's Escape}
-  {Jan 2017 - Jun 2020}
-  {
-    \begin{cvitems}
-      \item Designed, developed and published a 2D, top-down shooter game written in Java using the open source LibGDX game framework.
-      \item Implemented the A* pathfinding algorithm and recursive maze generation algorithm.
-      \item Made several contributions to LibGDX during development.
-    \end{cvitems}
-  }
+        \cventry
+        {Founder \& App Developer @ Interrealm Studios}
+        {Aug 2022 - Sep 2022}
+        {
+            \begin{cvitems}
+                \item Designed, programmed, launched, and marketed a privacy and security focused Android app using Kotlin and Jetpack Compose which lets you locate your phone using an SMS from any other mobile device.
+                \item Publicly available at \href{https://interrealmstudios.com}{interrealmstudios.com} with 50+ downloads.
+            \end{cvitems}
+        }
 
-\end{cventries}
+        \cventry
+        {Game Development: Larry's Escape}
+        {Jan 2017 - Jun 2020}
+        {
+            \begin{cvitems}
+                \item Designed, developed and published a 2D, top-down shooter game written in Java using the open source LibGDX game framework.
+                \item Implemented the A* pathfinding algorithm and recursive maze generation algorithm.
+                \item Made several contributions to LibGDX during development.
+            \end{cvitems}
+        }
 
-\cvsection{Skills}
+    \end{cventries}
 
-\begin{cvskills}
-  
-  \cvskill
-  {Languages}
-  {Rust, C\#, Python, Kotlin, C/C++, Java, TypeScript, Go, Dart}
+    \cvsection{Skills}
 
-  \cvskill
-  {DevOps}
-  {Git, GitLab (extensive in CI/CD), GitHub, AWS (CF, EC2, S3, ImageBuilder), Docker, Kubernetes}
+    \begin{cvskills}
 
-  \cvskill
-  {Technologies}
-  {Unity 3D, Flutter, CMake, Gradle, Cargo, REST APIs, Google Cloud, Firebase, SQL, OpenGL, OpenCV}
+        \cvskill
+        {Languages}
+        {Rust, C\#, Python, Kotlin, C/C++, Java, TypeScript, Go, Dart}
 
-\end{cvskills}
+        \cvskill
+        {DevOps}
+        {Git, GitLab (extensive in CI/CD), GitHub, AWS (CF, EC2, S3, ImageBuilder), Docker, Kubernetes}
 
-% \clearpage
+        \cvskill
+        {Technologies}
+        {Unity 3D, Flutter, CMake, Gradle, Cargo, REST APIs, Google Cloud, Firebase, SQL, OpenGL, OpenCV}
 
-\cvsection{Volunteering}
+    \end{cvskills}
 
-\begin{cventries}
+    \clearpage
 
-  \cventry
-  {General Secretary and Ethnic Diversity and Inclusion Officer @ UoN Computer Science Society}
-  {July 2021 - June 2023}
-  {
-    \begin{cvitems}
-      \item Reached out to multiple potential sponsors and speakers to organise many large events (up to 120 people) between multiple societies.
-      \item Built a web scraper and Discord bot in Rust, linked by a database to allow automated role assignment.
-      \item Used Docker and GitHub Actions to automatically build and deploy the application to own infrastructure.
-    \end{cvitems}
-  }
+    \cvsection{Volunteering}
 
-  \cventry
-  {Computer Science Mentor \& Senior Mentor @ University of Nottingham}
-  {2 years between 2020 and 2023}
-  {
-    \begin{cvitems}
-      \item Organised and led training for mentors, preparing them to hold workshops for first year students.
-      \item Led workshops for the first year university students to aid their learning across all their modules.
-      \item Organised and ran 15+ social events over 2 years.
-    \end{cvitems}
-  }
+    \begin{cventries}
 
-\end{cventries}
+        \cventry
+        {General Secretary and Ethnic Diversity and Inclusion Officer @ UoN Computer Science Society}
+        {July 2021 - June 2023}
+        {
+            \begin{cvitems}
+                \item Reached out to multiple potential sponsors and speakers to organise many large events (up to 120 people) between multiple societies.
+                \item Built a web scraper and Discord bot in Rust, linked by a database to allow automated role assignment.
+                \item Used Docker and GitHub Actions to automatically build and deploy the application to own infrastructure.
+            \end{cvitems}
+        }
+
+        \cventry
+        {Computer Science Mentor \& Senior Mentor @ University of Nottingham}
+        {2 years between 2020 and 2023}
+        {
+            \begin{cvitems}
+                \item Organised and led training for mentors, preparing them to hold workshops for first year students.
+                \item Led workshops for the first year university students to aid their learning across all their modules.
+                \item Organised and ran 15+ social events over 2 years.
+            \end{cvitems}
+        }
+
+    \end{cventries}
 
 \end{document}
