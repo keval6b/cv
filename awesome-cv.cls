@@ -591,84 +591,28 @@
   \color{sectiondivider}\vhrulefill{0.9pt}
 }
 
-% Define a subsection for CV
-% Usage: \cvsubsection{<subsection-title>}
-\newcommand{\cvsubsection}[1]{%
-  \vspace{\acvSectionContentTopSkip}
-  \vspace{-3mm}
-  \subsectionstyle{#1}
-  \phantomsection
-}
-
 % Define a paragraph for CV
-\newenvironment{cvparagraph}{%
-  \vspace{\acvSectionContentTopSkip}
-  \vspace{-3mm}
-  \paragraphstyle
-}{%
-  \par
-  \vspace{2mm}
-}
+\newenvironment{cvparagraph}{\paragraphstyle\vspace{-1mm}}{\par}
 
-% Define an environment for cventry
-\newenvironment{cventries}{%
-  \vspace{\acvSectionContentTopSkip}
-  \begin{center}
-}{%
-  \end{center}
-}
 % Define an entry of cv information
 % Usage: \cventry{<title>}{<date>}{<description>}
-\newcommand*{\cventry}[3]{%
-  \vspace{-2.0mm}
+\newcommand*{\cventry}[2]{%
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
-    \entrytitlestyle{#1} & \entrydatestyle{#2} \\
-    \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#3}}
+    \entrytitlestyle{#1} & \entrydatestyle{#2}
   \end{tabular*}%
 }
 
-% Define an environment for cvsubentry
-\newenvironment{cvsubentries}{%
-  \begin{center}
-}{%
-  \end{center}
-}
-% Define a subentry of cv information
-% Usage: \cvsubentry{<position>}{<title>}{<date>}{<description>}
-\newcommand*{\cvsubentry}[4]{%
-  \setlength\tabcolsep{0pt}
-  \setlength{\extrarowheight}{0pt}
-  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
-    \setlength\leftskip{0.2cm}
-    \subentrytitlestyle{#2} & \ifthenelse{\equal{#1}{}}
-      {\subentrydatestyle{#3}}{}
-    \ifthenelse{\equal{#1}{}}
-      {}
-      {\subentrypositionstyle{#1} & \subentrydatestyle{#3} \\}
-    \ifthenelse{\equal{#4}{}}
-      {}
-      {\multicolumn{2}{L{17.0cm}}{\subdescriptionstyle{#4}} \\}
-  \end{tabular*}
-}
-
-% Define an environment for cvhonor
-\newenvironment{cvhonors}{%
-  \vspace{\acvSectionContentTopSkip}
-  \vspace{-2mm}
-  \begin{center}
-    \setlength\tabcolsep{0pt}
-    \setlength{\extrarowheight}{0pt}
-    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} C{1.5cm} L{\textwidth - 4.0cm} R{2.5cm}}
-}{%
-    \end{tabular*}
-  \end{center}
-}
-% Define a line of cv information(honor, award or something else)
-% Usage: \cvhonor{<position>}{<title>}{<location>}{<date>}
-\newcommand*{\cvhonor}[4]{%
-  \honordatestyle{#4} & \honorpositionstyle{#1}, \honortitlestyle{#2} & \honorlocationstyle{#3} \\
+% Define an environment for cvitems(for cventry)
+\newenvironment{cvitems}{%
+  \paragraphstyle
+  \vspace{-1mm}
+  \begin{itemize}[leftmargin=2ex, nosep, noitemsep]
+    \setlength{\parskip}{0pt}
+    \renewcommand{\labelitemi}{\bullet}
+    }{%
+  \end{itemize}
 }
 
 % Define an environment for cvskill
@@ -685,19 +629,4 @@
 }
 % Define a line of cv information(skill)
 % Usage: \cvskill{<type>}{<skillset>}
-\newcommand*{\cvskill}[2]{%
-	\skilltypestyle{#1} & \skillsetstyle{#2} \\
-}
-
-% Define an environment for cvitems(for cventry)
-\newenvironment{cvitems}{%
-  \vspace{-4.0mm}
-  \begin{justify}
-  \begin{itemize}[leftmargin=2ex, nosep, noitemsep]
-    \setlength{\parskip}{0pt}
-    \renewcommand{\labelitemi}{\bullet}
-}{%
-  \end{itemize}
-  \end{justify}
-  \vspace{-4.0mm}
-}
+\newcommand*{\cvskill}[2]{\skilltypestyle{#1} & \skillsetstyle{#2} \\}
