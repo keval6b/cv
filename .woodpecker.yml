@@ -3,6 +3,7 @@ pipeline:
     image: ghcr.io/keval6b/xelatex:main
     commands:
       - make compile
+      - make compile
   push:
     image: curlimages/curl
     commands:
