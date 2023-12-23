@@ -1,4 +1,4 @@
-pipeline:
+steps:
   build:
     image: ghcr.io/keval6b/xelatex:main
     commands:
@@ -7,9 +7,7 @@ pipeline:
   push:
     image: curlimages/curl
     commands:
-      - curl --user "keval:$REGISTRY_TOKEN" -X "DELETE" "https://git.kapdee.uk/api/packages/keval/generic/cv/latest/keval-kapdee-cv.pdf"
-      - curl --user "keval:$REGISTRY_TOKEN" --upload-file "out/keval-kapdee-cv.pdf" "https://git.kapdee.uk/api/packages/keval/generic/cv/latest/keval-kapdee-cv.pdf"
+      - curl --user "keval:$PACKAGES_TOKEN" -X "DELETE" "https://git.kapdee.uk/api/packages/keval/generic/cv/${CI_COMMIT_BRANCH}/keval-kapdee-cv.pdf"
+      - curl --user "keval:$PACKAGES_TOKEN" --upload-file "out/keval-kapdee-cv.pdf" "https://git.kapdee.uk/api/packages/keval/generic/cv/${CI_COMMIT_BRANCH}/keval-kapdee-cv.pdf"
     secrets:
-      - registry_token
-
-branches: main
+      - packages_token
