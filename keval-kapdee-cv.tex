@@ -34,7 +34,7 @@
     \cvsection{Summary}
 
     \begin{cvparagraph}
-        I have professional experience in Cloud Migration, IoT, DevOps and Tooling, using mainly Python, C\#, GitLab CI/CD \& AWS\@.
+        I have professional experience in Cloud Migration, IaC, DevOps and Tooling, using mainly Python, C\#, GitLab CI/CD, Terraform \& AWS\@.
         I am a 1st class Computer Science Graduate from the University of Nottingham.
         I bring a passionate, hardworking mindset and despite working autonomously, I am often the go-to person for help in my team.
     \end{cvparagraph}
@@ -46,10 +46,10 @@
     {Sep 2023 - Present}
 
     \begin{cvitems}
-        \item Acquired 2 AWS certifications and continually learning more.
-        \item Worked with clients to architect their cloud migration strategies and solutions and ensured clear understanding of requirements and timelines.
-        \item Implemented the new AWS Fleetwise Edge Agent designed to gather CAN bus data from vehicles and ingest that into the cloud.
-        \item Attended the AWS Application Modernisation day 2023, learning a lot about AWS partners, business organisation and containers.
+        \item Acquired 2 AWS certifications and working on more.
+        \item Worked with clients to architect and perform their on-prem to cloud migrations, ensuring clear understanding of requirements and timelines.
+        \item Designed and prototyped a custom auth-based Kubernetes routing system using Istio service mesh.
+        \item Attended the AWS Application Modernization day 2023, learning a lot about AWS partners, business organization and Kubernetes.
     \end{cvitems}
 
     \cventry
@@ -62,8 +62,8 @@
         \item Collaborated with internal hardware teams to design and implement tooling to automatically deploy proprietary projects across the globe.
         \item Containerized a DotNet application and created pipelines (Bash \& Python) to automatically deploy it to the internal Kubernetes host.
         \item Provided first line support for GitLab pipelines and tools (Python and C\#), solving most issues the same day.
-        \item Coached and mentored 2 new team members, helping them integrate into the team quickly.
-        I also helped the team member from a non-programming background to significantly improve their programming skills.
+        \item Coached and mentored 2 new team members, helping them integrate into the team and start providing value quickly.
+        I also helped the team member from a non-programming background significantly improve their programming skills.
     \end{cvitems}
 
     \cventry
@@ -78,13 +78,9 @@
 
     \cvsection{Certifications}\label{certs}
 
-    \cventry
-    {AWS}
-    {}
-
     \begin{cvitems}
-        \item Certified Cloud Practitioner
-        \item Certified Solutions Architect Associate
+        \item AWS Certified Cloud Practitioner
+        \item AWS Certified Solutions Architect Associate
     \end{cvitems}
 
     \cvsection{Education}
@@ -111,35 +107,44 @@
     \cvsection{Notable Personal Projects}
 
     \cventry
-    {Personal Home Server and DevOps Environment}
+    {Self-Hosted DevOps Lab}
     {2016 - Present}
 
     \begin{cvparagraph}
-        Self-hosting numerous applications including but not limited to a family mail server, multiple static websites, Gitea with CI/CD, Wireguard VPN and Nextcloud, all backed by OAuth2.0/OIDC.
+        Self-hosting numerous applications including but not limited to a family mail server, multiple static websites, Gitea with Woodpecker CI/CD, Wireguard VPN, Grafana and Nextcloud, all backed by OAuth2.0/OIDC.
         Containerized applications with automated redundant backups.
-        Orchestrated with Terraform, Kubernetes, Ansible and Docker (Compose).
+        Built with Terraform, Kubernetes, Ansible, Docker (Compose), Oracle Cloud, Cloudflare, etc.
     \end{cvparagraph}
 
     \clearpage
 
     \cventry
-    {Docker Mailserver Contributions}
-    {Oct 2023 - Present}
+    {Personal Blog}
+    {Dec 2023 - Present}
+
+    \begin{cvparagraph}
+        My blog contains stories, post-mortems, technical guides and combinations of the three. 
+        Writing allows me to share my stories and technical knowledge with colleagues and friends while also allowing me to document the decisions and implementations of everything in my HomeLab and beyond.
+    \end{cvparagraph}
+
+    \cventry
+    {Docker Mailserver Contributions (Open Source)}
+    {Oct 2023 - Dec 2023}
 
     \begin{cvparagraph}
         My home server (above) was missing SSO for the email system, instead using its own authentication store.
         This meant that users had 2 passwords and usernames to handle which is less than ideal than just one.
         Having tried to find a solution that had OAuth 2.0 or SAML support and turning up empty, I decided to implement it for the email system that I was using.
-        I learnt a lot about OAuth 2.0, OIDC and networking.
+        I learnt a lot about OAuth 2.0, OIDC and networking during this. The PR can be found via my GitHub.
     \end{cvparagraph}
 
     \cventry
-    {Founder \& App Developer at Interrealm Studios}
+    {Pinpoint}
     {Aug 2022 - Sep 2022}
 
     \begin{cvparagraph}
-        Created a privacy and security focused Android app called Pinpoint which lets you locate your phone using an SMS from any other mobile device.
-        Publicly available at \href{https://interrealmstudios.com}{interrealmstudios.com} with 50+ downloads.
+        Created a privacy and security focused Android app which lets you locate your phone using an SMS from any other mobile device.
+        Achieved 50+ downloads before the Play Store changed their terms of service.
     \end{cvparagraph}
 
     \cventry
@@ -165,14 +170,14 @@
 
         \cvskill
         {Languages}
-        {C\#, Python, Kotlin, Rust, C/C++, Java, TypeScript, Go, Dart, Haskell, SQL}
+        {C\#, Python, Kotlin, Rust, Go, C/C++, Java, TypeScript, Dart, Haskell, SQL}
 
         \cvskill{Platforms}
         {GitLab, GitHub, AWS, JetBrains, Unity 3D, Visual Studio, Google Cloud, ROS}
 
         \cvskill
         {Technologies}
-        {Git, Docker, Kubernetes, Terraform, OpenGL, OAuth2.0/OIDC, OpenCV, Flutter}
+        {Git, Docker, Kubernetes, Terraform, Ansible, OAuth2.0/OIDC, OpenGL, OpenCV, Flutter}
 
     \end{cvskills}
 
@@ -210,16 +215,6 @@
         Member of the society throughout university.
         Competed in Varsity 2023, coming in 29th place across both universities.
         Competed in the LCC Big Comp in 2023, coming in 40th place out of 200+.
-    \end{cvparagraph}
-
-    \cventry
-    {Competitive University eSports | Rainbow 6 Siege}
-    {September 2019 - Present}
-
-    \begin{cvparagraph}
-        Played in two national inter-university competitions while part of the team: National Student eSports (NSE) and the National University Esports League (NUEL).
-        Developed strategies accounting for each team members' strengths and weaknesses allowing the team to play cohesively.
-        Learnt to adapt on the fly.
     \end{cvparagraph}
 
 \end{document}
