@@ -3,13 +3,11 @@
 
 \documentclass[11pt, a4paper]{awesome-cv}
 
-%\geometry{left=1.2cm, top=1.2cm, right=1.2cm, bottom=1.5cm}
+% tailwind green 800
+\definecolor{awesome}{HTML}{006530}
 
-\definecolor{awesome}{HTML}{379f33}
-
+% disable first 3 character highlighting
 \setbool{acvSectionColorHighlight}{false}
-
-\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
 
 \name{Keval}{Kapdee}
 \position{DevOps \& Backend Engineer{\enskip\cdotp\enskip}1st class Computer Science BSc Graduate}
@@ -135,7 +133,7 @@
     {2016 - Present}
 
     \begin{cvparagraph}
-        Self-hosting numerous applications including but not limited to a family mail server, multiple static websites, Gitea with Woodpecker CI/CD, WireGuard VPN, Grafana and Nextcloud, all backed by OAuth2.0/OIDC.
+        Self-hosting numerous applications including but not limited to a family mail server, multiple static websites, Gitea with Woodpecker CI/CD, WireGuard VPN, Grafana and Nextcloud, all backed by OAuth2.0/OIDC\@.
         Containerized applications with automated redundant backups.
         Built with Linux, Proxmox, Terraform, Docker (Compose), AWS, Oracle Cloud, Cloudflare, and more.
     \end{cvparagraph}
@@ -153,7 +151,8 @@
     {Jun 2023}
 
     \begin{cvparagraph}
-        Created a Spotify Approved web app using Golang and HTMX that utilizes the Spotify API to synchronize 'Liked Songs' with a sharable playlist for any Spotify user. Open source on GitHub.
+        Created a Spotify Approved web app using Golang and HTMX that utilizes the Spotify API to synchronize `Liked Songs' with a sharable playlist for any Spotify user.
+        Open source on GitHub.
     \end{cvparagraph}
 
     \cventry
