@@ -1,0 +1,24 @@
+Dear Hiring Team,
+
+I’m excited to apply for the Senior Sales Engineer role in London. I’m a Solutions Engineer with 3+ years delivering analytics and AI‑adjacent solutions across AWS and GCP. In recent roles I’ve partnered closely with go‑to‑market teams to run discovery, shape value narratives, deliver tailored demos, and lead POCs that connect technical depth to measurable business outcomes.
+
+Why Dataiku
+Dataiku’s Universal AI Platform, meeting teams where they are with no/low/full‑code workflows, aligns tightly with how I work: enabling both technical and non‑technical stakeholders to unlock value quickly while maintaining governance and scalability. I’m especially drawn to pairing hands‑on data work (SQL, Python, cloud) with clear, outcome‑driven storytelling for diverse audiences.
+
+How I’ll make an impact
+- Qualify and collaborate: Partner with AEs and BDRs to prioritize opportunities, refine value hypotheses, and build mutual success plans grounded in customer KPIs.
+- Discovery: Lead structured discovery to map business goals, data landscape, personas, and constraints (security, privacy, data access) and translate them into usage scenarios.
+- Value storytelling and demos: Craft narratives and live demos that connect customer pain points to Dataiku capabilities, using realistic datasets and workflows to show time‑to‑value.
+- POCs and evaluations: Plan and run milestone‑based POCs with clear success criteria; coordinate resources, track outcomes, and document why Dataiku wins versus alternatives.
+- Technical guidance: Field questions from data/engineering teams on architecture, data prep, orchestration, and performance; advise on best practices and trade‑offs.
+- Pipeline building: Support events, webinars, and campaigns; I’m comfortable presenting to contributors and executives, and I regularly create technical content and demo scripts.
+
+Relevant experience
+- Led discovery and POCs that progressed to implementation, including analytics pipelines and interactive dashboards translating raw data into actionable insights.
+- Built SQL‑driven analyses and time‑series workflows; developed Python solutions on AWS/GCP; optimized cloud architectures for cost and scale.
+- Served as the bridge between product, engineering, and business stakeholders, converting requirements into clear technical plans and demo stories.
+
+I’m eager to rapidly ramp on Dataiku’s product and best practices and would welcome the chance to discuss how I’d approach discovery and a POV for one of your target accounts. Thank you for your time and consideration.
+
+Kind regards,
+Keval Kapdee
