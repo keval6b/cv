@@ -10,7 +10,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/keval6b/xelatex:main
+      image: texlive/texlive:latest
 
     steps:
       - name: Checkout repository
