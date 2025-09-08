@@ -1,1 +1,27 @@
 
+name: Build CV
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/keval6b/xelatex:main
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build PDF
+        run: make compile
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: keval-kapdee-cv
+          path: out/keval-kapdee-cv.pdf
+          retention-days: 7
