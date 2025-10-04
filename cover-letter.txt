@@ -1,0 +1,10 @@
+Dear Hiring Manager,
+
+I am applying for the Performance Improvement Technology Consulting - Cloud Solutions role at EY. I am a Cloud DevOps and full‑stack engineer with a first‑class Computer Science degree and AWS and Terraform certifications. I have built and operated production cloud platforms (GCP and AWS), designed cost‑efficient Terraform infrastructure, and implemented reliable CI/CD pipelines, delivering measurable improvements in cost, performance and deployability.
+
+I am eager to relocate from the UK to Malaysia and to bring the best parts of UK work culture together with my cloud expertise to support your team.
+
+I enjoy working directly with clients and leadership to turn technical decisions into business value and would welcome the chance to discuss how I can help EY deliver secure, scalable cloud solutions.
+
+Sincerely,
+Keval Kapdee
