@@ -1,7 +1,7 @@
 %!TEX TS-program = xelatex
 %!TEX encoding = UTF-8 Unicode
 
-\documentclass[11pt, a4paper]{awesome-cv}
+\documentclass[10pt, a4paper]{awesome-cv}
 
 % tailwind green 800
 \definecolor{awesome}{HTML}{006530}
@@ -10,7 +10,7 @@
 \setbool{acvSectionColorHighlight}{false}
 
 \name{Keval}{Kapdee}
-\position{Cloud DevOps \& Full-Stack Engineer{\enskip\cdotp\enskip}1st class Computer Science BSc Graduate}
+\position{Senior Software Engineer{\enskip\cdotp\enskip}1st class in CS from University of Nottingham}
 \address{London, UK}
 
 \mobile{}
@@ -20,6 +20,10 @@
 \linkedin{keval-kapdee}
 
 \usepackage{lastpage}
+
+% % Slightly tighter spacing to help fit one page
+% % \setlength{\parskip}{0pt}
+% \renewcommand{\baselinestretch}{0.95}
 
 \begin{document}
 
@@ -35,12 +39,12 @@
     {Feb 2025 - Present}
 
     \begin{cvitems}
-        \item Led architectural evolution from POC to production-grade AI platform, making key technical decisions and advising leadership.
-        \item Built B2B2C analytics platform with full-stack dashboards, backend APIs, and data visualization using PostHog.
-        \item Optimized GCP Cloud Run infrastructure with Terraform, significantly reducing cloud expenses through cost-efficient architectures.
-        \item Designed comprehensive GitLab CI/CD pipelines, improving deployment velocity and system reliability.
-        \item Shaped engineering culture through hiring, mentorship, and technical standards establishment.
-        \item Conducted client meetings, requirements gathering, and discovery workshops to align technical solutions with business needs.
+        \item Led end-to-end product engineering and set engineering/project standards.
+        \item Built secure, declarative GCP infra with Terraform and cut cloud spend by ~70\% via service optimisation and serverless.
+        \item Delivered customer dashboard and Python API (FastAPI); implemented GitLab CI/CD, multi-env pipelines and PostHog analytics; ensured GDPR compliance.
+        \item Delivered email AI with a graph-based agentic workflow with MCP tools for higher reliability.
+        \item Assumed technical leadership, directing architecture, delivery, and mentoring engineers.
+        \item Led integrations and client-facing projects aligning technical delivery with business goals.
     \end{cvitems}
 
     \cventry
@@ -48,9 +52,8 @@
     {June 2025 - Aug 2025}
 
     \begin{cvitems}
-        \item Built production-grade MVP press release platform with analytics, managing full project lifecycle from concept to deployment.
-        \item Architected full-stack AWS solution using Lambda, S3, CloudFront with secure payment processing and OpenAI integration.
-        \item Developed performance analytics dashboard enabling client engagement tracking and effectiveness measurement.
+        \item Built production-ready press-release platform with analytics, payments and OpenAI integration proven to be able to send 40 press releases per second.
+        \item Architected scalable, serverless AWS stack (Lambda, S3, CloudFront) and an analytics dashboard for engagement tracking.
     \end{cvitems}
 
     \cventry
@@ -60,7 +63,7 @@
     \begin{cvitems}
         \item Developed DotNet microservices on Kubernetes/AWS with MySQL RDS, RabbitMQ, and React Native mobile app.
         \item Championed reusable CI/CD system adopted as client standard; pioneered GitLab Terraform templates.
-        \item Architected cloud migrations using Agile methodologies and designed custom Kubernetes routing with Istio service mesh.
+        \item Performed AWS cloud migrations for 4 live applications with less than 5 minutes of downtime each.
         \item Built ETL pipelines from FileMaker databases and integrated third-party blockchain systems.
         \item Ran workshops to upskill clients on cloud technologies and DevOps best practices.
         \item Participated in numerous client calls for requirements gathering, project updates, and technical consultations.
@@ -75,6 +78,7 @@
         \item Ported Palo Alto VPN client to Windows, enabling automated deployments across global sites.
         \item Containerized DotNet tools with Bash/Python pipelines for Kubernetes deployment automation.
         \item Mentored two team members and provided first-line support for GitLab pipelines and development tools.
+        \item Authored and maintained SOC 2 compliance documentation as part of security and process initiatives.
     \end{cvitems}
 
     \cvsection{Certifications}\label{certs}
@@ -91,9 +95,9 @@
     {Computer Science with Year in Industry BSc at the University of Nottingham}
     {Sep 2019 - Jun 2023}
 
-    \begin{cvitems}
-        \item Graduated with \textbf{1st class} degree and ``Best Code'' prize (30+ team competition).
-    \end{cvitems}
+    \begin{cvparagraph}
+        Graduated with \textbf{1st class} degree; awarded ``Best Code'' (30+ team competition).
+    \end{cvparagraph}
 
     \cvsection{Notable Personal Projects}
 
@@ -102,7 +106,7 @@
     {2016 - Present}
 
     \begin{cvparagraph}
-        Production infrastructure hosting mail server, CI/CD (Gitea/Woodpecker), VPN, monitoring (Grafana), and cloud storage with OAuth2.0/OIDC authentication. Built with Linux, Proxmox, Terraform, Docker, AWS, Oracle Cloud.
+        Production home infrastructure (mail server, CI/CD, VPN, monitoring, cloud storage) with OAuth2/OIDC; built using Linux, Proxmox, Terraform, Docker and multiple clouds.
     \end{cvparagraph}
 
     \cventry
@@ -110,7 +114,7 @@
     {Oct 2023 - Dec 2023}
 
     \begin{cvparagraph}
-        Implemented OAuth2 authentication with comprehensive Bash test cases and NetCat-based IMAP protocol testing.
+        Implemented OAuth2 authentication and a suite of Bash/Netcat tests for IMAP reliability.
     \end{cvparagraph}
 
     \cvsection{Skills}
@@ -119,11 +123,11 @@
         \cvskill{Cloud \& DevOps}
         {AWS (EC2, Lambda, S3, RDS), GCP (Cloud Run, Vertex AI), Terraform, Docker, Kubernetes, CI/CD}
 
-        \cvskill{Languages \& Frameworks}
-        {Python, Go, C\#, React (Native), Bash}
+        \cvskill{Languages \& Technologies}
+        {Python (FastAPI, SQLAlchemy), Go, Typescript, C\#, React.js, Pydantic AI}
 
         \cvskill{Security \& Infrastructure}
-        {OAuth2.0, OIDC, Networking, Linux, Microservices}
+        {OAuth2/OIDC, Networking, Linux, Microservices}
     \end{cvskills}
 
 \end{document}
