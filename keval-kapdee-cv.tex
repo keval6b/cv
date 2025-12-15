@@ -41,7 +41,7 @@
     \begin{cvitems}
         \item Owned end-to-end product execution in a high-ambiguity environment; established engineering and delivery standards.
         \item Designed secure, declarative GCP infrastructure with Terraform; reduced cloud spend by ~70\% through right-sizing, serverless, and service optimisation.
-        \item Shipped customer dashboard (modern React/TypeScript) and Python API (FastAPI); introduced GitLab CI/CD with multi-environment pipelines, added PostHog analytics; ensured GDPR and PCI compliance.
+        \item Shipped customer dashboard (modern React/TypeScript) and Python API (FastAPI); designed a schema-first REST API (OpenAPI) with request/response validation and consistent error handling; introduced GitLab CI/CD with multi-environment pipelines, added PostHog analytics; ensured GDPR and PCI compliance.
         \item Built email AI using a graph-based agentic workflow (Pydantic AI \& Logfire) and MCP tools to improve reliability.
         \item Provided technical leadership across architecture and delivery; mentored three engineers.
         \item Partnered with stakeholders to align technical work with business goals and prioritise based on feedback.
@@ -54,7 +54,7 @@
     \begin{cvitems}
         \item Took the press-release platform from concept to production: analytics, payments, and OpenAI integration; capable of 40 press releases per second (40000 emails).
         \item Collaborated closely with stakeholders to refine requirements and iterate quickly based on feedback.
-        \item Architected a scalable, idempotent serverless AWS stack (Golang Lambdas, S3, CloudFront, DynamoDB, CloudWatch, SQS) and delivered a modern TypeScript/React web app with end-to-end Clerk authentication \& billing.
+        \item Architected a scalable, idempotent serverless AWS stack (Golang Lambdas, S3, CloudFront, DynamoDB, CloudWatch, SQS with DLQs and retries); implemented a schema-first REST API (OpenAPI) with idempotency keys and consistent error contracts; delivered a modern TypeScript/React web app with end-to-end Clerk authentication \& billing.
     \end{cvitems}
 
     \cventry
@@ -124,7 +124,7 @@
         {AWS, GCP, Terraform, CI/CD, Docker, Kubernetes}
 
         \cvskill{Languages \& Technologies}
-        {Golang, Python, TypeScript, C\#, React.js}
+        {Golang, Python, TypeScript, C\#, React.js, NoSQL (DynamoDB), SQL (MySQL, PostgreSQL), Redis}
 
         \cvskill{Security \& Infrastructure}
         {OAuth2/OIDC, Networking, Linux, Microservices}
