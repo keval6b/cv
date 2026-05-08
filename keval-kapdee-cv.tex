@@ -34,6 +34,13 @@
     {Cloud Engineer at takara.ai}
     {Apr 2026 - Present}
 
+    \begin{cvitems}
+        \item Shipped full-stack features across two live client AI products (GameGenius for Play'n GO, Motek Q) — spanning AWS CDK infrastructure, LangGraph/Bedrock agent backends, and React frontends.
+        \item Architected and delivered Dogtanian: stripped a production iGaming AI agent down to a domain-agnostic white-label template (routing logic, guardrails, system prompts, document export), now used as the base for new client deployments including a conversational sports betting PoC.
+        \item Built observability and cost controls for Motek Q: ECS and Step Function CloudWatch dashboards, Lambda reconciliation pipeline, SageMaker instance right-sizing (cutting \$4k+/month spend).
+        \item Diagnosed and fixed a WebSocket connection drop in production that only manifested in client AWS accounts — traced to an intermediate cache layer beyond CloudFront.
+    \end{cvitems}
+
     \cventry
     {Cloud Engineer at EzGIG (Contract)}
     {Mar 2026}
@@ -122,10 +129,13 @@
 
     \begin{cvskills}
         \cvskill{Cloud/DevOps}
-        {AWS, GCP, Terraform, CI/CD, Docker, Kubernetes}
+        {AWS, GCP, Terraform, CDK, CI/CD, Docker, Kubernetes}
 
         \cvskill{Languages \& Technologies}
         {Golang, Python, TypeScript, C\#, React.js, Websockets, REST APIs, DynamoDB, PostgreSQL, MySQL}
+
+        \cvskill{AI/ML}
+        {LangGraph, AWS Bedrock, AgentCore, SageMaker, RAG, OpenAI}
 
         \cvskill{Security \& Infrastructure}
         {OAuth2/OIDC, Networking, Linux, Microservices}
