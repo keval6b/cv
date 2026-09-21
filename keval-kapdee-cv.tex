@@ -35,9 +35,10 @@
     {Apr 2026 - Present}
 
     \begin{cvitems}
-        \item Shipped full-stack features across two live client AI products, spanning AWS CDK infrastructure, LangGraph/Bedrock agent backends, and React frontends.
-        \item Built a domain-agnostic white-label AI agent template (routing, guardrails, prompts, document export) from a production deployment; now the base for all new client onboarding.
-        \item Built observability and cost controls for a client: ECS and Step Function CloudWatch dashboards, Lambda reconciliation pipeline, SageMaker instance right-sizing (cutting \$1,730/month, 67\% reduction).
+        \item Designed and shipped prepaid token billing for a public embedding API: Stripe Checkout, webhook crediting, auto-replenish, refunds/chargebacks, credit expiry, and card-on-file rate-limit tiers.
+        \item Built Clerk JWT inference auth and a device-code login flow for IDE plugins; hardened multi-env CDK (WAF/TLS, CloudWatch, DynamoDB PITR, CloudTrail, Secrets Manager, pre-prod to prod promotion).
+        \item Shipped Miru MCP/plugin integrations (Cursor, Claude, Kiro) and SageMaker Marketplace CloudFormation/CDK templates for self-hosted embeddings.
+        \item Delivered client AI products (CDK, LangGraph/Bedrock, React) and a white-label agent template (OpenAPI handlers, guardrails, OpenTelemetry); cut a client's SageMaker spend 67\% (\$1{,}730/month).
     \end{cvitems}
 
     \cventry
@@ -64,7 +65,7 @@
     {Sep 2023 - Feb 2025}
 
     \begin{cvitems}
-        \item Delivered .NET microservices on Kubernetes/AWS with MySQL RDS, RabbitMQ, and a React Native mobile app.
+        \item Delivered .NET microservices on AWS with MySQL RDS, RabbitMQ, and a React Native mobile app.
         \item Migrated four live applications to AWS with <5 minutes downtime each; championed a reusable CI/CD system adopted as a client standard.
         \item Ran client workshops on cloud architecture and DevOps practices; contributed to pre-sales and technical consultations.
     \end{cvitems}
@@ -80,10 +81,9 @@
 
     \cvsection{Certifications}\label{certs}
 
-    \begin{cvitems}
-        \item \textbf{AWS}: AWS DevOps Engineer Professional; AWS Solutions Architect Associate
-        \item \textbf{HashiCorp}: HashiCorp Terraform Associate
-    \end{cvitems}
+    \begin{cvparagraph}
+        \textbf{AWS} DevOps Engineer Professional; \textbf{HashiCorp} Terraform Associate
+    \end{cvparagraph}
 
     \cvsection{Education}
 
@@ -117,16 +117,16 @@
 
     \begin{cvskills}
         \cvskill{Cloud/DevOps}
-        {AWS, GCP, Terraform, CDK, CI/CD, Docker, Kubernetes}
+        {AWS, GCP, Terraform, CDK, CI/CD, Docker}
 
-        \cvskill{Languages \& Technologies}
-        {Golang, Python, TypeScript, C\#, React.js, Websockets, REST APIs, DynamoDB, PostgreSQL, MySQL}
+        \cvskill{Languages \& Tech}
+        {Golang, Python, TypeScript, C\#, React, REST, DynamoDB, PostgreSQL}
 
         \cvskill{AI/ML}
-        {LangGraph, AWS Bedrock, AgentCore, SageMaker, RAG}
+        {LangGraph, Bedrock, AgentCore, SageMaker, RAG, MCP, OpenTelemetry}
 
-        \cvskill{Security \& Infrastructure}
-        {OAuth2/OIDC, Networking, Linux, Microservices}
+        \cvskill{Auth \& billing}
+        {OAuth2/OIDC, Clerk, Stripe, Networking, Linux}
     \end{cvskills}
 
 \end{document}
