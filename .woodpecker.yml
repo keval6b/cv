@@ -6,7 +6,7 @@ steps:
   build:
     image: ghcr.io/keval6b/xelatex:main
     commands:
-      - make compile
+      - ./compile.sh
   push:
     image: curlimages/curl
     commands:
