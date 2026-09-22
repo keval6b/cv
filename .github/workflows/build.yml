@@ -13,19 +13,23 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: texlive/texlive:latest
+    strategy:
+      matrix:
+        role: [general, cloud, ai]
+        location: [malaysia, uk]
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v7
 
       - name: Build PDF
-        run: ./compile.sh
+        run: ./compile.sh ${{ matrix.role }} ${{ matrix.location }}
 
       - name: Upload artifact
         uses: actions/upload-artifact@v7
         with:
-          name: keval-kapdee-cv
-          path: out/keval-kapdee-cv.pdf
+          name: keval-kapdee-cv-${{ matrix.role }}-${{ matrix.location }}
+          path: out/keval-kapdee-cv-${{ matrix.role }}-${{ matrix.location }}.pdf
           retention-days: 7
 
   release:
@@ -35,10 +39,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v7
 
-      - name: Download artifact
+      - name: Download artifacts
         uses: actions/download-artifact@v8
         with:
-          name: keval-kapdee-cv
+          pattern: keval-kapdee-cv-*
+          merge-multiple: true
           path: out
 
       - name: Replace latest release
@@ -46,7 +51,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           gh release delete latest --yes --cleanup-tag || true
-          gh release create latest out/keval-kapdee-cv.pdf \
+          gh release create latest out/*.pdf \
             --title "Latest CV" \
             --notes "Built from ${{ github.sha }}" \
             --latest
