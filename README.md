@@ -12,7 +12,7 @@ One master file, [`keval-kapdee-cv.tex`](keval-kapdee-cv.tex). Role and location
 ./compile.sh cloud uk
 just compile ai uk
 just docker cloud malaysia
-just compile-all              # all six PDFs locally
+just compile-all              # all six PDFs locally, in parallel
 ```
 
 Output is `out/keval-kapdee-cv-{role}-{location}.pdf`. Push to `main` builds the matrix and attaches every PDF to the `latest` GitHub release.
