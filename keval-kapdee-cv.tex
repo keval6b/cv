@@ -28,6 +28,12 @@
     %! suppress = UnresolvedReference
     \makecvfooter{\today}{Keval Kapdee}{\thepage\ /~\pageref{LastPage}}
 
+    \cvsection{Summary}
+
+    \begin{cvparagraph}
+        Cloud and applied-AI engineer. AWS (CDK, Terraform, Lambda, ECS, SageMaker, Bedrock), GCP, production billing and auth (Stripe, Clerk, OAuth2/OIDC). First-class Computer Science BSc, University of Nottingham. AWS DevOps Engineer Professional, Solutions Architect Associate, HashiCorp Terraform Associate. Based in the UK, working from Malaysia (UTC+8) with morning UK overlap. Seeking remote or EOR cloud/platform or applied-AI infra roles.
+    \end{cvparagraph}
+
     \cvsection{Experience}\label{experience}
 
     \cventry
@@ -38,16 +44,18 @@
         \item Designed and shipped prepaid token billing for a public embedding API: Stripe Checkout, webhook crediting, auto-replenish, refunds/chargebacks, credit expiry, and card-on-file rate-limit tiers.
         \item Built Clerk JWT inference auth and a device-code login flow for IDE plugins; hardened multi-env CDK (WAF/TLS, CloudWatch, DynamoDB PITR, CloudTrail, Secrets Manager, pre-prod to prod promotion).
         \item Shipped Miru MCP/plugin integrations (Cursor, Claude, Kiro) and SageMaker Marketplace CloudFormation/CDK templates for self-hosted embeddings.
-        \item Delivered client AI products (CDK, LangGraph/Bedrock, React) and a white-label agent template (OpenAPI handlers, guardrails, OpenTelemetry); cut a client's SageMaker spend 67\% (\$1{,}730/month).
+        \item Delivered full-stack client AI products (AWS CDK, LangGraph/Bedrock agents, React) across 5 clients; 3 took PoCs and follow-on work in-house, building on our base. Contributed to pre-sales technical architecture.
+        \item Built a domain-agnostic white-label AI agent template from a production deployment (routing, guardrails, system prompts, OpenAPI handlers, document export, OpenTelemetry); next client had a raw product spun up in one day from that base.
+        \item Built observability and cost controls: ECS and Step Functions CloudWatch dashboards, Lambda reconciliation pipeline, SageMaker instance right-sizing; cut a client's SageMaker spend 67\% (\$1{,}730/month).
+        \item Diagnosed and fixed a production WebSocket connection drop that only manifested in client AWS accounts, traced to an intermediate cache layer beyond CloudFront.
     \end{cvitems}
 
     \cventry
-    {Lead Engineer at ItsRaw.AI (Part-Time Contract)}
+    {Lead Engineer at ItsRaw.AI (part-time)}
     {Jun 2025 - Present}
 
     \begin{cvitems}
-        \item Shipped a production-grade press-release platform in 6 weeks; launched with \$500 MRR and zero production incidents: analytics, payments, OpenAI integration, capable of 40 press releases per second.
-        \item Architected a scalable, idempotent serverless AWS stack (Golang Lambdas, S3, CloudFront, DynamoDB, CloudWatch, SQS) and delivered a modern TypeScript/React web app with end-to-end Clerk authentication \& billing.
+        \item Engaged on a 3-month contract to ship v1; retained as part-owner. Shipped a production-grade press-release platform in 6 weeks on an idempotent serverless AWS stack (Golang Lambdas, S3, CloudFront, DynamoDB, SQS) with a TypeScript/React app and Clerk auth/billing; launched at \$600 MRR in month 1 with zero production incidents; OpenAI integration capable of 40 press releases per second.
     \end{cvitems}
 
     \cventry
@@ -55,9 +63,12 @@
     {Feb 2025 - Jan 2026}
 
     \begin{cvitems}
-        \item Designed secure, declarative GCP infrastructure with Terraform; reduced cloud spend by 70\% through right-sizing, serverless, and service optimisation.
-        \item Shipped customer dashboard (React/TypeScript) and Python API (FastAPI); GitLab CI/CD with multi-environment pipelines, PostHog analytics; GDPR and PCI compliance.
-        \item Built email AI using a graph-based agentic workflow (Pydantic AI \& Logfire) and MCP tools to improve reliability; provided technical leadership across architecture and delivery, mentoring three engineers.
+        \item Led the product from PoC to production: architectural decisions, engineering standards, hiring input, and advising leadership.
+        \item Designed secure, declarative GCP infrastructure with Terraform (Cloud Run and related services); reduced cloud spend by 70\% through right-sizing, serverless, and service optimisation.
+        \item Shipped customer dashboard (React/TypeScript) and Python API (FastAPI); GitLab CI/CD with multi-environment pipelines; GDPR and PCI compliance.
+        \item Instrumented the product with PostHog: event capture, dashboards, and B2B2C analytics used to steer delivery from stakeholder feedback.
+        \item Built email AI using a graph-based agentic workflow (Pydantic AI and Logfire) and MCP tools; raised accuracy from 40\% to 90\%.
+        \item Mentored three engineers who shipped a new hotel integration in two weeks in my absence.
     \end{cvitems}
 
     \cventry
@@ -65,9 +76,11 @@
     {Sep 2023 - Feb 2025}
 
     \begin{cvitems}
-        \item Delivered .NET microservices on AWS with MySQL RDS, RabbitMQ, and a React Native mobile app.
-        \item Migrated four live applications to AWS with <5 minutes downtime each; championed a reusable CI/CD system adopted as a client standard.
-        \item Ran client workshops on cloud architecture and DevOps practices; contributed to pre-sales and technical consultations.
+        \item Delivered .NET microservices on AWS with Entity Framework, MySQL RDS, RabbitMQ, and a React Native mobile app backed by AWS Amplify.
+        \item Migrated four live applications from on-prem to AWS with under 5 minutes downtime each, using Agile delivery.
+        \item Championed a reusable CI/CD system adopted as the client standard for all 30 apps across 20+ teams (owned by the infra team); authored reusable GitLab Terraform state templates.
+        \item Built ETL pipelines from on-premise FileMaker databases and integrated a third-party blockchain system.
+        \item Ran client workshops on cloud architecture and DevOps; requirements gathering, project updates, and pre-sales technical consultations.
     \end{cvitems}
 
     \cventry
@@ -75,15 +88,29 @@
     {Sep 2021 - Sep 2022}
 
     \begin{cvitems}
-        \item Designed EC2 launch system for CI/CD pipelines, achieving a 25\% time reduction per pipeline.
-        \item Ported Palo Alto VPN client to Windows, enabling automated deployments across global sites.
+        \item Designed an EC2 launch system for CI/CD pipelines, achieving a 25\% time reduction per pipeline.
+        \item Ported an internal headless Palo Alto GlobalProtect VPN client from Linux to Windows, unblocking automated deployments across global sites.
+        \item Containerized .NET tools with Bash/Python pipelines for automated deployment.
+        \item First-line support for GitLab pipelines and Python/C\# tools; mentored two team members. Team rated best in the department.
+        \item Authored and maintained SOC 2 compliance documentation; audit passed.
+        \item Worked with internal hardware teams on tooling to deploy proprietary projects globally.
+    \end{cvitems}
+
+    \cventry
+    {App Developer at Manta Group Ltd.}
+    {Jul 2020 - Oct 2020}
+
+    \begin{cvitems}
+        \item Built a gamified stock-price prediction app from scratch with Flutter and Firebase (including Cloud Functions) and a third-party ticker API.
+        \item Iterated from client and user feedback and delivered within budget.
     \end{cvitems}
 
     \cvsection{Certifications}\label{certs}
 
-    \begin{cvparagraph}
-        \textbf{AWS} DevOps Engineer Professional; \textbf{HashiCorp} Terraform Associate
-    \end{cvparagraph}
+    \begin{cvitems}
+        \item \textbf{AWS}: DevOps Engineer Professional; Solutions Architect Associate
+        \item \textbf{HashiCorp}: Terraform Associate
+    \end{cvitems}
 
     \cvsection{Education}
 
@@ -91,8 +118,18 @@
     {Computer Science with Year in Industry BSc at the University of Nottingham}
     {Sep 2019 - Jun 2023}
 
+    \begin{cvitems}
+        \item Graduated with a \textbf{first class} degree.
+        \item Awarded ``Best Code'' prize out of 30+ teams in the Software Engineering Group Project (interactive visual model for parity games).
+        \item Coursework covering operating systems and concurrency (C), databases, networking, robotics, and game development.
+    \end{cvitems}
+
+    \cventry
+    {A Levels at Merchant Taylors' School}
+    {Sep 2017 - Jun 2019}
+
     \begin{cvparagraph}
-        Graduated with a \textbf{first class} degree; awarded ``Best Code'' prize out of 30+ teams in the group project module.
+        Computing (A), Maths (A), Physics (B)
     \end{cvparagraph}
 
     \cvsection{Notable Personal Projects}
@@ -102,7 +139,7 @@
     {2016 - Present}
 
     \begin{cvparagraph}
-        Production home infrastructure (mail server, CI/CD, VPN, monitoring, cloud storage) with OAuth2/OIDC; built using Linux, Proxmox, Terraform, Docker, and cloud (AWS, Cloudflare, Oracle).
+        Production home infrastructure: family mail server, static sites, Gitea CI/CD, WireGuard VPN, Grafana, Nextcloud, OAuth2/OIDC, containerised apps with redundant backups. Linux, Proxmox, Terraform, Docker Compose, AWS, Oracle Cloud, Cloudflare.
     \end{cvparagraph}
 
     \cventry
@@ -110,23 +147,67 @@
     {2022 - Present}
 
     \begin{cvparagraph}
-        Spotify Developer-approved app that clones a user's ``Liked Songs'' into a shareable playlist via the Spotify Web API (OAuth2).
+        Spotify Developer-approved app (Golang, HTMX) that clones a user's ``Liked Songs'' into a shareable playlist via the Spotify Web API (OAuth2). Open source on GitHub.
+    \end{cvparagraph}
+
+    \cventry
+    {Docker Mailserver (open source)}
+    {Oct 2023 - Dec 2023}
+
+    \begin{cvparagraph}
+        Implemented OAuth2/OIDC authentication for docker-mailserver; Bash regression tests using Netcat to drive IMAP.
+    \end{cvparagraph}
+
+    \cventry
+    {Personal blog}
+    {Dec 2023 - Present}
+
+    \begin{cvparagraph}
+        Postmortems and technical guides on homelab networking, mail, and system administration at keval.kapdee.uk.
+    \end{cvparagraph}
+
+    \cventry
+    {Pinpoint: Find My Phone}
+    {Jan 2021}
+
+    \begin{cvparagraph}
+        Privacy-focused Android find-my-phone app using passphrase SMS from any phone, returning a Google Maps location link; Stripe-paid covert/silent mode.
+    \end{cvparagraph}
+
+    \cvsection{Volunteering}
+
+    \cventry
+    {General Secretary and EDI Officer at the UoN Computer Science Society}
+    {Jul 2021 - Jun 2023}
+
+    \cventry
+    {Computer Science Mentor and Senior Mentor at the University of Nottingham}
+    {2020--2021, 2022--2023}
+
+    \begin{cvparagraph}
+        Workshops for first-years and mentors; improved the scheme for later years.
     \end{cvparagraph}
 
     \cvsection{Skills}
 
     \begin{cvskills}
         \cvskill{Cloud/DevOps}
-        {AWS, GCP, Terraform, CDK, CI/CD, Docker}
+        {AWS (EC2, Lambda, S3, RDS, DynamoDB, CloudFront, ECS, Step Functions, IAM, VPC, CloudFormation, CDK), GCP (Cloud Run, Cloud SQL, Cloud Storage), Terraform, Docker, CI/CD (GitLab, GitHub)}
 
         \cvskill{Languages \& Tech}
-        {Golang, Python, TypeScript, C\#, React, REST, DynamoDB, PostgreSQL}
+        {Golang, Python (FastAPI), TypeScript, C\#, React, React Native, REST, WebSockets, PostgreSQL, MySQL, RabbitMQ, SQS}
 
         \cvskill{AI/ML}
-        {LangGraph, Bedrock, AgentCore, SageMaker, RAG, MCP, OpenTelemetry}
+        {LangGraph, Pydantic AI, Bedrock, AgentCore, SageMaker, RAG, MCP, OpenTelemetry, OpenAI}
 
         \cvskill{Auth \& billing}
-        {OAuth2/OIDC, Clerk, Stripe, Networking, Linux}
+        {OAuth2/OIDC, Clerk, Stripe}
+
+        \cvskill{Product analytics}
+        {PostHog}
+
+        \cvskill{Security \& infra}
+        {Networking, Linux, WireGuard, Microservices, SOC 2, GDPR, PCI}
     \end{cvskills}
 
 \end{document}
