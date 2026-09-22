@@ -20,9 +20,11 @@ case "$LOCATION" in
     ;;
 esac
 
-mkdir -p out
+mkdir -p out out/aux
 job="keval-kapdee-cv-${ROLE}-${LOCATION}"
 src="\\def\\cvrole{${ROLE}}\\def\\cvlocation{${LOCATION}}\\input{keval-kapdee-cv.tex}"
 
-xelatex -output-directory=out -jobname="$job" "$src"
-xelatex -output-directory=out -jobname="$job" "$src"
+# TeX Live xelatex has no -aux-directory; keep aux/log here and move the PDF out.
+xelatex -output-directory=out/aux -jobname="$job" "$src"
+xelatex -output-directory=out/aux -jobname="$job" "$src"
+mv -f "out/aux/${job}.pdf" "out/${job}.pdf"
