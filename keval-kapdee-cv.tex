@@ -51,7 +51,7 @@
 
     \begin{cvparagraph}
         \ifcvrole{cloud}{%
-            Cloud and platform engineer. AWS (CDK, Terraform, Lambda, ECS, SageMaker, Bedrock), GCP, production billing and auth (Stripe, Clerk, OAuth2/OIDC).%
+            Cloud and platform engineer. AWS (CDK, Terraform, Lambda, ECS, CloudFront, IAM, VPC), reusable CI/CD and IaC, production observability (CloudWatch, Grafana). Enables squads to provision, ship, and run infrastructure safely.%
         }{\ifcvrole{ai}{%
             Applied-AI engineer. SageMaker, Bedrock, LangGraph, MCP, AWS (CDK, Terraform, Lambda, ECS), GCP, production billing and auth (Stripe, Clerk, OAuth2/OIDC).%
         }{%
@@ -74,11 +74,10 @@
     {Mar 2026 - Present}
 
     \begin{cvitems}
-        \item Designed and shipped prepaid token billing for a public embedding API: Stripe Checkout, webhook crediting, auto-replenish, refunds/chargebacks, credit expiry, and card-on-file rate-limit tiers. Built Clerk JWT inference auth and an OAuth device-code flow for IDE plugins (plugin shows a URL the user approves in a browser), so users no longer manage API keys by hand.
-        \item Delivered full-stack client AI products (AWS CDK, LangGraph/Bedrock agents, React) across 5 clients; 3 took PoCs and follow-on work in-house, building on our base. Contributed to pre-sales technical architecture. Shipped Miru MCP in Cursor, Claude, and Kiro, and SageMaker Marketplace templates for self-hosted embeddings.
-        \item Built a domain-agnostic white-label AI agent template from a production deployment (routing, guardrails, system prompts, OpenAPI handlers, document export, OpenTelemetry); next client had a raw product spun up in one day from that base.
         \item Built observability and cost controls: ECS and Step Functions CloudWatch dashboards, Lambda reconciliation pipeline, SageMaker instance right-sizing; cut a client's SageMaker spend 67\% (\$1{,}730/month).
         \item Diagnosed and fixed a production WebSocket connection drop that only manifested in client AWS accounts, traced to an intermediate cache layer beyond CloudFront.
+        \item Ran production AWS for client workloads (CDK, Lambda, ECS): prepaid Stripe billing, Clerk JWT auth, and an OAuth device-code flow so plugins no longer ship long-lived API keys.
+        \item Delivered full-stack client products (AWS CDK, React) across 5 clients; 3 took PoCs and follow-on work in-house. Contributed pre-sales architecture and SageMaker Marketplace templates for self-hosted embeddings.
     \end{cvitems}
 
     \cventry
@@ -94,11 +93,9 @@
     {Feb 2025 - Jan 2026}
 
     \begin{cvitems}
-        \item Led the product from PoC to production: architectural decisions, engineering standards, hiring input, and advising leadership; shipped React/TypeScript dashboard and FastAPI, GitLab multi-env CI/CD, GDPR.
         \item Designed secure, declarative GCP infrastructure with Terraform (Cloud Run and related services); reduced cloud spend by 70\% through right-sizing, serverless, and service optimisation.
+        \item Led the product from PoC to production: architectural decisions, engineering standards, GitLab multi-env CI/CD, GDPR. Mentored three engineers who shipped a new hotel integration in two weeks in my absence.
         \item Instrumented the product with PostHog: event capture, dashboards, and B2B2C analytics used to steer delivery from stakeholder feedback.
-        \item Built email AI with a graph-based agentic workflow (Pydantic AI, Logfire, MCP) and RAG over a hotel knowledge base; eval-driven loops raised accuracy from 40\% to 90\%.
-        \item Mentored three engineers who shipped a new hotel integration in two weeks in my absence.
     \end{cvitems}
 
     \cventry
@@ -106,8 +103,8 @@
     {Sep 2023 - Feb 2025}
 
     \begin{cvitems}
-        \item Migrated four live applications from on-prem to AWS with under 5 minutes downtime each, embedded on-site with enterprise clients.
-        \item Championed a reusable CI/CD system adopted as the client standard for all 30 apps across 20+ teams (owned by the infra team); authored reusable GitLab Terraform state templates. Contributed pre-sales architecture.
+        \item Championed a reusable CI/CD system adopted as the client standard for all 30 apps across 20+ teams (owned by the infra team); authored reusable GitLab Terraform state templates for self-serve pipelines.
+        \item Migrated four live applications from on-prem to AWS with under 5 minutes downtime each, embedded on-site with enterprise clients. Contributed pre-sales architecture.
     \end{cvitems}
 
     \cventry
@@ -115,9 +112,9 @@
     {Sep 2021 - Sep 2022}
 
     \begin{cvitems}
-        \item Designed an EC2 launch system for CI/CD pipelines, achieving a 25\% time reduction per pipeline.
+        \item Designed an EC2 launch system for CI/CD pipelines at a high-volume grocery e-commerce platform, achieving a 25\% time reduction per pipeline.
         \item Ported an internal headless Palo Alto GlobalProtect VPN client from Linux to Windows, unblocking automated deployments across global sites.
-        \item First-line support for GitLab pipelines and Python/C\# tools; mentored two team members. Team rated best in the department.
+        \item First-line support for GitLab pipelines and Python/C\# tools (incident and developer-experience work); mentored two team members. Team rated best in the department.
         \item Authored and maintained SOC 2 compliance documentation; audit passed.
     \end{cvitems}
 
@@ -148,7 +145,7 @@
     {2016 - Present}
 
     \begin{cvparagraph}
-        Production home infrastructure: family mail server, static sites, Gitea CI/CD, WireGuard VPN, Grafana, Nextcloud, OAuth2/OIDC, containerised apps with redundant backups. Linux, Proxmox, Terraform, Docker Compose, AWS, Oracle Cloud, Cloudflare.
+        Production home infrastructure: Grafana dashboards and alerts, Gitea CI/CD, family mail server, static sites, WireGuard VPN, Nextcloud, OAuth2/OIDC, containerised apps with redundant backups. Linux, Proxmox, Terraform, Docker Compose, AWS, Oracle Cloud, Cloudflare.
     \end{cvparagraph}
 
     \cventry
@@ -189,10 +186,10 @@
             {LangGraph, Pydantic AI, Bedrock, AgentCore, SageMaker, RAG, MCP, OpenTelemetry, OpenAI}
 
             \cvskill{Cloud/DevOps}
-            {AWS (EC2, Lambda, S3, RDS, DynamoDB, CloudFront, ECS, Step Functions, IAM, VPC, CloudFormation, CDK), GCP (Cloud Run, Cloud SQL, Cloud Storage), Terraform, Docker, CI/CD (GitLab, GitHub)}
+            {AWS (EC2, Lambda, S3, RDS, DynamoDB, CloudFront, ECS, Step Functions, IAM, VPC, CloudFormation, CDK), GCP (Cloud Run, Cloud SQL, Cloud Storage), Terraform, Docker, CI/CD (GitLab, GitHub Actions)}
         }{%
             \cvskill{Cloud/DevOps}
-            {AWS (EC2, Lambda, S3, RDS, DynamoDB, CloudFront, ECS, Step Functions, IAM, VPC, CloudFormation, CDK), GCP (Cloud Run, Cloud SQL, Cloud Storage), Terraform, Docker, CI/CD (GitLab, GitHub)}
+            {AWS (EC2, Lambda, S3, RDS, DynamoDB, CloudFront, ECS, Step Functions, IAM, VPC, CloudFormation, CDK), GCP (Cloud Run, Cloud SQL, Cloud Storage), Terraform, Docker, CI/CD (GitLab, GitHub Actions)}
 
             \cvskill{AI/ML}
             {LangGraph, Pydantic AI, Bedrock, AgentCore, SageMaker, RAG, MCP, OpenTelemetry, OpenAI}
@@ -207,8 +204,11 @@
         \cvskill{Product analytics}
         {PostHog}
 
+        \cvskill{Observability}
+        {Grafana, CloudWatch, OpenTelemetry}
+
         \cvskill{Security \& infra}
-        {Networking, Linux, WireGuard, Microservices, SOC 2, GDPR}
+        {Networking, Linux, WireGuard, Microservices, SOC 2, GDPR, IAM}
     \end{cvskills}
 
 \end{document}
