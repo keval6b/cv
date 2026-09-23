@@ -53,7 +53,7 @@
         \ifcvrole{cloud}{%
             Cloud and platform engineer. AWS (CDK, Terraform, Lambda, ECS, SageMaker, Bedrock), GCP, production billing and auth (Stripe, Clerk, OAuth2/OIDC).%
         }{\ifcvrole{ai}{%
-            Applied AI engineer. Production Python (FastAPI), LLMs and generative AI (LangGraph, Pydantic AI, Bedrock, RAG), eval-driven experimentation, and production observability (OpenTelemetry, CloudWatch, Logfire). AWS (CDK, Lambda, ECS, SageMaker) and GCP.%
+            Applied AI engineer. Production Python (FastAPI), LLMs and generative AI (LangGraph, Pydantic AI, Bedrock, RAG), eval-driven development, and production observability (OpenTelemetry, CloudWatch, Logfire). AWS (CDK, Lambda, ECS, SageMaker) and GCP.%
         }{%
             Cloud and applied-AI engineer. AWS (CDK, Terraform, Lambda, ECS, SageMaker, Bedrock), GCP, production billing and auth (Stripe, Clerk, OAuth2/OIDC).%
         }}
@@ -69,10 +69,11 @@
     {Mar 2026 - Present}
 
     \begin{cvitems}
-        \item Delivered production generative-AI products (LangGraph/Bedrock agents, AWS CDK, React) across 5 clients; 3 took PoCs and follow-on work in-house, building on our base. Shipped Miru MCP in Cursor, Claude, and Kiro, and SageMaker Marketplace templates for self-hosted embeddings.
+        \item Delivered full-stack client AI products (AWS CDK, LangGraph/Bedrock agents, React) across 5 clients; 3 took PoCs and follow-on work in-house, building on our base. Contributed to pre-sales technical architecture. Shipped Miru MCP in Cursor, Claude, and Kiro, and SageMaker Marketplace templates for self-hosted embeddings.
         \item Built a domain-agnostic white-label AI agent template from a production deployment (routing, guardrails, system prompts, OpenAPI handlers, document export, OpenTelemetry); next client had a raw product spun up in one day from that base.
         \item Built observability and cost controls: ECS and Step Functions CloudWatch dashboards, Lambda reconciliation pipeline, SageMaker instance right-sizing; cut a client's SageMaker spend 67\% (\$1{,}730/month).
-        \item Designed and shipped prepaid token billing for a public embedding API: Stripe Checkout, webhook crediting, auto-replenish, refunds/chargebacks, credit expiry, and card-on-file rate-limit tiers. Built Clerk JWT inference auth and an OAuth device-code flow for IDE plugins so users no longer manage API keys by hand.
+        \item Designed and shipped prepaid token billing for a public embedding API: Stripe Checkout, webhook crediting, auto-replenish, refunds/chargebacks, credit expiry, and card-on-file rate-limit tiers. Built Clerk JWT inference auth and an OAuth device-code flow for IDE plugins (plugin shows a URL the user approves in a browser), so users no longer manage API keys by hand.
+        \item Diagnosed and fixed a production WebSocket connection drop that only manifested in client AWS accounts, traced to an intermediate cache layer beyond CloudFront.
     \end{cvitems}
 
     \cventry
@@ -179,16 +180,16 @@
     \begin{cvskills}
         \ifcvrole{ai}{%
             \cvskill{AI/ML}
-            {LangGraph, Pydantic AI, Bedrock, RAG, evals, MCP, SageMaker, OpenAI}
+            {LangGraph, Pydantic AI, Bedrock, AgentCore, SageMaker, RAG, MCP, OpenAI}
 
             \cvskill{Languages}
-            {Python (FastAPI), TypeScript, Golang, React, REST, WebSockets, PostgreSQL}
+            {Python (FastAPI), TypeScript, Golang, C\#, React, React Native, REST, WebSockets, PostgreSQL, MySQL, RabbitMQ, SQS}
 
             \cvskill{Observability}
-            {OpenTelemetry, CloudWatch, Logfire, Grafana, PostHog}
+            {OpenTelemetry, CloudWatch, Logfire, Grafana}
 
             \cvskill{Cloud/DevOps}
-            {AWS (Lambda, ECS, SageMaker, CDK), GCP (Cloud Run), Terraform, Docker, CI/CD (GitLab, GitHub)}
+            {AWS (EC2, Lambda, S3, RDS, DynamoDB, CloudFront, ECS, Step Functions, IAM, VPC, CloudFormation, CDK), GCP (Cloud Run, Cloud SQL, Cloud Storage), Terraform, Docker, CI/CD (GitLab, GitHub)}
         }{%
             \cvskill{Cloud/DevOps}
             {AWS (EC2, Lambda, S3, RDS, DynamoDB, CloudFront, ECS, Step Functions, IAM, VPC, CloudFormation, CDK), GCP (Cloud Run, Cloud SQL, Cloud Storage), Terraform, Docker, CI/CD (GitLab, GitHub)}
