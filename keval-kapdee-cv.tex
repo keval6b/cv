@@ -22,7 +22,7 @@
 \ifcvrole{cloud}{%
     \position{Cloud / Platform Engineer}%
 }{\ifcvrole{ai}{%
-    \position{Applied AI Engineer}%
+    \position{AI Engineer}%
 }{%
     \position{Cloud \& AI Engineer}%
 }}
@@ -53,13 +53,13 @@
         \ifcvrole{cloud}{%
             Cloud and platform engineer. AWS (CDK, Terraform, Lambda, ECS, SageMaker, Bedrock), GCP, production billing and auth (Stripe, Clerk, OAuth2/OIDC).%
         }{\ifcvrole{ai}{%
-            Applied-AI engineer. SageMaker, Bedrock, LangGraph, MCP, AWS (CDK, Terraform, Lambda, ECS), GCP, production billing and auth (Stripe, Clerk, OAuth2/OIDC).%
+            Applied AI engineer. Production Python (FastAPI), LLMs and generative AI (LangGraph, Pydantic AI, Bedrock, RAG), eval-driven experimentation, and production observability (OpenTelemetry, CloudWatch, Logfire). AWS (CDK, Lambda, ECS, SageMaker) and GCP.%
         }{%
             Cloud and applied-AI engineer. AWS (CDK, Terraform, Lambda, ECS, SageMaker, Bedrock), GCP, production billing and auth (Stripe, Clerk, OAuth2/OIDC).%
         }}
         First-class Computer Science BSc, University of Nottingham. AWS DevOps Engineer Professional, Solutions Architect Associate.
         \ifcvlocation{uk}{Seeking UK-based or remote}{Seeking UK/EU/US remote or EOR}
-        \ifcvrole{cloud}{ cloud/platform roles.}{\ifcvrole{ai}{ applied-AI infra roles.}{ cloud/platform or applied-AI infra roles.}}
+        \ifcvrole{cloud}{ cloud/platform roles.}{\ifcvrole{ai}{ applied AI roles.}{ cloud/platform or applied-AI infra roles.}}
     \end{cvparagraph}
 
     \cvsection{Experience}\label{experience}
@@ -69,11 +69,10 @@
     {Mar 2026 - Present}
 
     \begin{cvitems}
-        \item Designed and shipped prepaid token billing for a public embedding API: Stripe Checkout, webhook crediting, auto-replenish, refunds/chargebacks, credit expiry, and card-on-file rate-limit tiers. Built Clerk JWT inference auth and an OAuth device-code flow for IDE plugins (plugin shows a URL the user approves in a browser), so users no longer manage API keys by hand.
-        \item Delivered full-stack client AI products (AWS CDK, LangGraph/Bedrock agents, React) across 5 clients; 3 took PoCs and follow-on work in-house, building on our base. Contributed to pre-sales technical architecture. Shipped Miru MCP in Cursor, Claude, and Kiro, and SageMaker Marketplace templates for self-hosted embeddings.
+        \item Delivered production generative-AI products (LangGraph/Bedrock agents, AWS CDK, React) across 5 clients; 3 took PoCs and follow-on work in-house, building on our base. Shipped Miru MCP in Cursor, Claude, and Kiro, and SageMaker Marketplace templates for self-hosted embeddings.
         \item Built a domain-agnostic white-label AI agent template from a production deployment (routing, guardrails, system prompts, OpenAPI handlers, document export, OpenTelemetry); next client had a raw product spun up in one day from that base.
         \item Built observability and cost controls: ECS and Step Functions CloudWatch dashboards, Lambda reconciliation pipeline, SageMaker instance right-sizing; cut a client's SageMaker spend 67\% (\$1{,}730/month).
-        \item Diagnosed and fixed a production WebSocket connection drop that only manifested in client AWS accounts, traced to an intermediate cache layer beyond CloudFront.
+        \item Designed and shipped prepaid token billing for a public embedding API: Stripe Checkout, webhook crediting, auto-replenish, refunds/chargebacks, credit expiry, and card-on-file rate-limit tiers. Built Clerk JWT inference auth and an OAuth device-code flow for IDE plugins so users no longer manage API keys by hand.
     \end{cvitems}
 
     \cventry
@@ -89,11 +88,11 @@
     {Feb 2025 - Jan 2026}
 
     \begin{cvitems}
-        \item Led the product from PoC to production: architectural decisions, engineering standards, hiring input, and advising leadership; shipped React/TypeScript dashboard and FastAPI, GitLab multi-env CI/CD, GDPR.
-        \item Designed secure, declarative GCP infrastructure with Terraform (Cloud Run and related services); reduced cloud spend by 70\% through right-sizing, serverless, and service optimisation.
+        \item Built email AI in production Python: a graph-based agentic workflow (Pydantic AI, Logfire, MCP) and RAG over a hotel knowledge base; eval-driven loops raised accuracy from 40\% to 90\%.
+        \item Led the product from PoC to production: architectural decisions, engineering standards, hiring input, and advising leadership; shipped a FastAPI service and React/TypeScript dashboard, GitLab multi-env CI/CD, GDPR.
         \item Instrumented the product with PostHog: event capture, dashboards, and B2B2C analytics used to steer delivery from stakeholder feedback.
-        \item Built email AI with a graph-based agentic workflow (Pydantic AI, Logfire, MCP) and RAG over a hotel knowledge base; eval-driven loops raised accuracy from 40\% to 90\%.
         \item Mentored three engineers who shipped a new hotel integration in two weeks in my absence.
+        \item Designed secure, declarative GCP infrastructure with Terraform (Cloud Run and related services); reduced cloud spend by 70\% through right-sizing, serverless, and service optimisation.
     \end{cvitems}
 
     \cventry
@@ -180,10 +179,16 @@
     \begin{cvskills}
         \ifcvrole{ai}{%
             \cvskill{AI/ML}
-            {LangGraph, Pydantic AI, Bedrock, AgentCore, SageMaker, RAG, MCP, OpenTelemetry, OpenAI}
+            {LangGraph, Pydantic AI, Bedrock, RAG, evals, MCP, SageMaker, OpenAI}
+
+            \cvskill{Languages}
+            {Python (FastAPI), TypeScript, Golang, React, REST, WebSockets, PostgreSQL}
+
+            \cvskill{Observability}
+            {OpenTelemetry, CloudWatch, Logfire, Grafana, PostHog}
 
             \cvskill{Cloud/DevOps}
-            {AWS (EC2, Lambda, S3, RDS, DynamoDB, CloudFront, ECS, Step Functions, IAM, VPC, CloudFormation, CDK), GCP (Cloud Run, Cloud SQL, Cloud Storage), Terraform, Docker, CI/CD (GitLab, GitHub)}
+            {AWS (Lambda, ECS, SageMaker, CDK), GCP (Cloud Run), Terraform, Docker, CI/CD (GitLab, GitHub)}
         }{%
             \cvskill{Cloud/DevOps}
             {AWS (EC2, Lambda, S3, RDS, DynamoDB, CloudFront, ECS, Step Functions, IAM, VPC, CloudFormation, CDK), GCP (Cloud Run, Cloud SQL, Cloud Storage), Terraform, Docker, CI/CD (GitLab, GitHub)}
@@ -192,8 +197,10 @@
             {LangGraph, Pydantic AI, Bedrock, AgentCore, SageMaker, RAG, MCP, OpenTelemetry, OpenAI}
         }
 
-        \cvskill{Languages \& Tech}
-        {Golang, Python (FastAPI), TypeScript, C\#, React, React Native, REST, WebSockets, PostgreSQL, MySQL, RabbitMQ, SQS}
+        \ifcvrole{ai}{}{%
+            \cvskill{Languages \& Tech}
+            {Golang, Python (FastAPI), TypeScript, C\#, React, React Native, REST, WebSockets, PostgreSQL, MySQL, RabbitMQ, SQS}
+        }
 
         \cvskill{Auth \& billing}
         {OAuth2/OIDC, Clerk, Stripe}
