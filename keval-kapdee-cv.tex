@@ -50,14 +50,7 @@
     \cvsection{Summary}
 
     \begin{cvparagraph}
-        \ifcvrole{cloud}{%
-            Cloud and platform engineer. AWS (CDK, Terraform, Lambda, ECS, SageMaker, Bedrock), GCP, production billing and auth (Stripe, Clerk, OAuth2/OIDC).%
-        }{\ifcvrole{ai}{%
-            Applied-AI engineer. SageMaker, Bedrock, LangGraph, MCP, AWS (CDK, Terraform, Lambda, ECS), GCP, production billing and auth (Stripe, Clerk, OAuth2/OIDC).%
-        }{%
-            Cloud and applied-AI engineer. AWS (CDK, Terraform, Lambda, ECS, SageMaker, Bedrock), GCP, production billing and auth (Stripe, Clerk, OAuth2/OIDC).%
-        }}
-        First-class Computer Science BSc, University of Nottingham. AWS DevOps Engineer Professional, Solutions Architect Associate.
+        Cloud and applied-AI engineer with 4+ years shipping production systems. Built LLM agents with eval-driven accuracy gains (40\% to 90\%), self-serve Stripe billing, and cut cloud spend up to 70\%. Retained as part-owner by a client after shipping their v1 in 6 weeks. First-class Computer Science BSc, University of Nottingham. AWS DevOps Engineer Professional, Solutions Architect Associate.
         \ifcvlocation{uk}{Seeking UK-based or remote}{Open to relocation to Malaysia for}
         \ifcvrole{cloud}{ cloud/platform roles.}{\ifcvrole{ai}{ applied-AI infra roles.}{ cloud/platform or applied-AI infra roles.}}
     \end{cvparagraph}
@@ -70,8 +63,8 @@
 
     \begin{cvitems}
         \item Led the end-to-end delivery of prepaid token billing using Stripe (webhooks, refunds, expiry, auto-replenish) for a public embedding API, running the requirements gathering, the design (including idempotency and reconciliation strategies), and the delivery through multi-environment testing. This unlocked self-serve billing in under 3 weeks where takara.ai previously only had enterprise billing.
-        \item Built observability and cost controls: ECS and Step Functions CloudWatch dashboards, Lambda reconciliation pipeline, SageMaker instance right-sizing; cut a client's SageMaker spend 67\% (\$1{,}730/month).        
-        \item Built a domain-agnostic white-label AI agent template from a production deployment (routing, guardrails, system prompts, OpenAPI handlers, document export, OpenTelemetry); the next client went from zero to working product in one day, versus 3 weeks from scratch.
+        \item Built observability and cost controls: ECS and Step Functions CloudWatch dashboards, Lambda reconciliation pipeline, SageMaker instance right-sizing; cut a client's SageMaker spend 67\% (\$1{,}730/month).
+        \item Built a domain-agnostic white-label agentic chatbot template from a production deployment; the next client went from zero to working product in one day, versus 3 weeks from scratch.
         \item Delivered full-stack client AI products (AWS CDK, LangGraph/Bedrock agents, React, CI/CD) across 5 clients, including pre-sales technical architecture, demos, and support.
         \item Designed and shipped Clerk device-code flow OAuth for IDE plugins, so users no longer manage API keys by hand, shaped directly from client feedback sessions.
         \item Diagnosed and fixed a long-standing production WebSocket connection drop bug that only manifested in client AWS accounts, traced to an unset timeout in API Gateway.
@@ -82,7 +75,7 @@
     {Jun 2025 - Present}
 
     \begin{cvitems}
-        \item Engaged on a 3-month contract to ship v1; retained as part-owner. Shipped a production-grade press-release platform in 6 weeks on an idempotent serverless AWS stack (Golang Lambdas, S3, CloudFront, DynamoDB, SQS) with a TypeScript/React app and Clerk auth/billing; launched at \$600 MRR in month 1 with zero production incidents; platform load-tested end to end at 40 press releases per second (40{,}000 emails), including email sending.
+        \item Engaged on a 3-month contract to ship v1; retained as part-owner. Shipped a production-grade press-release platform in 6 weeks on an idempotent serverless AWS stack (Golang Lambdas, S3, CloudFront, DynamoDB, SQS) with a TypeScript/React app and Clerk auth/billing; launched at \$600 MRR in month 1 with zero production incidents; platform load-tested end-to-end at 40 press releases per second (40{,}000 emails), including email sending.
     \end{cvitems}
 
     \cventry
@@ -90,11 +83,11 @@
     {Feb 2025 - Jan 2026}
 
     \begin{cvitems}
-        \item Led the product from PoC to production: architectural decisions, engineering standards, hiring input, and advising leadership.
-        \item Shipped a React/TypeScript dashboard and FastAPI backend with GitLab multi-env CI/CD, all while maintaining GDPR compliance as a fundamental design requirement.
+        \item Led product development from PoC to production: architectural decisions, engineering standards, hiring input, and advising leadership.
+        \item Built email AI with a graph-based agentic workflow (Pydantic AI, Logfire, MCP) and RAG over a hotel knowledge base; eval-driven loops raised accuracy from 40\% to 90\%.
+        \item Shipped a React/TypeScript dashboard and FastAPI backend with GitLab multi-environment CI/CD, all while maintaining GDPR compliance as a fundamental design requirement.
         \item Designed secure, declarative GCP infrastructure with Terraform (Cloud Run and related services); reduced cloud spend by 70\% through right-sizing, serverless, and service optimisation.
         \item Instrumented the product with PostHog: event capture, dashboards, and B2B2C analytics used to steer delivery from stakeholder feedback which directly influenced the product roadmap.
-        \item Built email AI with a graph-based agentic workflow (Pydantic AI, Logfire, MCP) and RAG over a hotel knowledge base; eval-driven loops raised accuracy from 40\% to 90\%.
         \item Mentored three engineers in software delivery, who went on to ship a new hotel integration in two weeks after the first took 2 months to complete.
     \end{cvitems}
 
@@ -112,8 +105,8 @@
     {Sep 2021 - Sep 2022}
 
     \begin{cvitems}
-        \item Designed an EC2 launch system for CI/CD pipelines, achieving a 25\% time reduction per pipeline.
-        \item Ported an internal headless Palo Alto GlobalProtect VPN client from Linux to Windows, unblocking automated deployments across global sites.
+        \item Designed an EC2 launch system for CI/CD pipelines, achieving a 25\% time reduction per pipeline from 1 hour to 45 minutes.
+        \item Ported an internal headless Palo Alto VPN client from Linux to Windows, unblocking automated deployments across global sites.
         \item First-line support for GitLab pipelines and Python/C\# tools; mentored two team members.
         \item Authored and maintained SOC 2 compliance documentation used as a template across the department; audit passed.
     \end{cvitems}
