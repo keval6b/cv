@@ -98,6 +98,8 @@
     \begin{cvitems}
         \item Migrated four live applications from on-prem to AWS with under 5 minutes downtime each, embedded on-site with enterprise clients.
         \item Championed a reusable CI/CD system adopted as the client standard for all 30 apps across 20+ teams (owned by the infra team); authored reusable GitLab Terraform state templates. Contributed pre-sales architecture.
+        \item Stood up Kubernetes on AWS with kubeadm and deployed a .NET microservices application (MySQL RDS, RabbitMQ, React Native) across dev, staging, and production for per-environment testing and rollout.
+        \item Diagnosed production .NET microservices failing Kubernetes health checks, where the only recovery was restarting kube-proxy and kubelet on the node; root-caused the failures to connections overflowing the conntrack table.
     \end{cvitems}
 
     \cventry
@@ -138,7 +140,7 @@
     {2016 - Present}
 
     \begin{cvparagraph}
-        Production home infrastructure: family mail server, static sites, Gitea CI/CD, WireGuard VPN, Grafana, Nextcloud, OAuth2/OIDC, containerised apps with redundant backups. Linux, Proxmox, Terraform, Docker Compose, AWS, Oracle Cloud, Cloudflare.
+        Production home infrastructure: family mail server, static sites, Gitea CI/CD, WireGuard VPN, Grafana, Nextcloud, OAuth2/OIDC, containerised apps with redundant backups. Linux, Proxmox, Kubernetes, Argo CD, Terraform, Docker Compose, AWS, Oracle Cloud, Cloudflare.
     \end{cvparagraph}
 
     \cventry
@@ -179,10 +181,10 @@
             {LangGraph, Pydantic AI, Bedrock, AgentCore, SageMaker, RAG, MCP, OpenTelemetry, OpenAI}
 
             \cvskill{Cloud/DevOps}
-            {AWS (EC2, Lambda, S3, RDS, DynamoDB, CloudFront, ECS, Step Functions, IAM, VPC, CloudFormation, CDK), GCP (Cloud Run, Cloud SQL, Cloud Storage), Terraform, Docker, CI/CD (GitLab, GitHub)}
+            {AWS (EC2, Lambda, S3, RDS, DynamoDB, CloudFront, ECS, Step Functions, IAM, VPC, CloudFormation, CDK), GCP (Cloud Run, Cloud SQL, Cloud Storage), Terraform, Docker, Kubernetes, Argo CD, CI/CD (GitLab, GitHub)}
         }{%
             \cvskill{Cloud/DevOps}
-            {AWS (EC2, Lambda, S3, RDS, DynamoDB, CloudFront, ECS, Step Functions, IAM, VPC, CloudFormation, CDK), GCP (Cloud Run, Cloud SQL, Cloud Storage), Terraform, Docker, CI/CD (GitLab, GitHub)}
+            {AWS (EC2, Lambda, S3, RDS, DynamoDB, CloudFront, ECS, Step Functions, IAM, VPC, CloudFormation, CDK), GCP (Cloud Run, Cloud SQL, Cloud Storage), Terraform, Docker, Kubernetes, Argo CD, CI/CD (GitLab, GitHub)}
 
             \cvskill{AI/ML}
             {LangGraph, Pydantic AI, Bedrock, AgentCore, SageMaker, RAG, MCP, OpenTelemetry, OpenAI}
