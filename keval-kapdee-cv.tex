@@ -50,7 +50,17 @@
     \cvsection{Summary}
 
     \begin{cvparagraph}
-        Cloud and applied-AI engineer with 4+ years shipping production systems. Built LLM agents with eval-driven accuracy gains (40\% to 90\%), self-serve Stripe billing, and cut cloud spend up to 70\%. Retained as part-owner by a client after shipping their v1 in 6 weeks. First-class Computer Science BSc, University of Nottingham. AWS DevOps Engineer Professional, Solutions Architect Associate.
+        \ifcvrole{cloud}{%
+            Cloud and platform engineer with 4+ years shipping production infrastructure. Cut cloud spend up to 70\%, migrated live applications to AWS with under 5 minutes downtime, and stood up Kubernetes on AWS with kubeadm for multi-environment rollout.%
+        }{%
+            Cloud and applied-AI engineer with 4+ years shipping production systems. Built LLM agents with eval-driven accuracy gains (40\% to 90\%), self-serve Stripe billing, and cut cloud spend up to 70\%.%
+        }
+        \ifcvrole{cloud}{%
+            Championed a reusable CI/CD system adopted as the client standard for 30 apps across 20+ teams.%
+        }{%
+            Retained as part-owner by a client after shipping their v1 in 6 weeks.%
+        }
+        First-class Computer Science BSc, University of Nottingham. AWS DevOps Engineer Professional, Solutions Architect Associate.
         \ifcvlocation{uk}{Seeking UK-based or remote}{Open to relocation to Malaysia for}
         \ifcvrole{cloud}{ cloud/platform roles.}{\ifcvrole{ai}{ applied-AI infra roles.}{ cloud/platform or applied-AI infra roles.}}
     \end{cvparagraph}
