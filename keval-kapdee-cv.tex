@@ -4,7 +4,7 @@
 \documentclass[10pt, a4paper]{awesome-cv}
 
 % Variants: pass \def\cvrole{cloud}\def\cvlocation{uk} before \input, or use compile.sh.
-% Roles: general (default) | cloud | ai
+% Roles: general (default) | cloud | ai | product
 % Locations: malaysia (default) | uk
 \providecommand{\cvrole}{general}
 \providecommand{\cvlocation}{malaysia}
@@ -19,13 +19,15 @@
 \setbool{acvSectionColorHighlight}{false}
 
 \name{Keval}{Kapdee}
-\ifcvrole{cloud}{%
+\ifcvrole{product}{%
+    \position{Product Engineer}%
+}{\ifcvrole{cloud}{%
     \position{Cloud / Platform Engineer}%
 }{\ifcvrole{ai}{%
     \position{Applied AI Engineer}%
 }{%
     \position{Cloud \& AI Engineer}%
-}}
+}}}
 \ifcvlocation{uk}{%
     \address{London, UK | UK citizen | 1 month notice}%
 }{%
@@ -50,19 +52,23 @@
     \cvsection{Summary}
 
     \begin{cvparagraph}
-        \ifcvrole{cloud}{%
+        \ifcvrole{product}{%
+            Product engineer with 4+ years shipping production software end to end. Owned features from requirements through design and delivery: self-serve Stripe billing in under 3 weeks, a TypeScript/React platform in 6 weeks, and a reusable product template that took the next client from zero to a working product in one day.%
+        }{\ifcvrole{cloud}{%
             Cloud and platform engineer with 4+ years shipping production infrastructure. Cut cloud spend up to 70\%, migrated live applications to AWS with under 5 minutes downtime, and stood up Kubernetes on AWS with kubeadm for multi-environment rollout.%
         }{%
             Cloud and applied-AI engineer with 4+ years shipping production systems. Built LLM agents with eval-driven accuracy gains (40\% to 90\%), self-serve Stripe billing, and cut cloud spend up to 70\%.%
-        }
-        \ifcvrole{cloud}{%
+        }}
+        \ifcvrole{product}{%
+            Retained as part-owner after shipping a client's v1 in 6 weeks. First-class Computer Science BSc, University of Nottingham.%
+        }{\ifcvrole{cloud}{%
             Championed a reusable CI/CD system adopted as the client standard for 30 apps across 20+ teams.%
         }{%
             Retained as part-owner by a client after shipping their v1 in 6 weeks.%
-        }
-        First-class Computer Science BSc, University of Nottingham. AWS DevOps Engineer Professional, Solutions Architect Associate.
+        }}
+        \ifcvrole{product}{}{First-class Computer Science BSc, University of Nottingham. AWS DevOps Engineer Professional, Solutions Architect Associate.}
         \ifcvlocation{uk}{Seeking UK-based or remote}{Open to relocation to Malaysia for}
-        \ifcvrole{cloud}{ cloud/platform roles.}{\ifcvrole{ai}{ applied-AI infra roles.}{ cloud/platform or applied-AI infra roles.}}
+        \ifcvrole{product}{ product engineering roles.}{\ifcvrole{cloud}{ cloud/platform roles.}{\ifcvrole{ai}{ applied-AI infra roles.}{ cloud/platform or applied-AI infra roles.}}}
     \end{cvparagraph}
 
     \cvsection{Experience}\label{experience}
@@ -72,12 +78,20 @@
     {Mar 2026 - Present}
 
     \begin{cvitems}
-        \item Led the end-to-end delivery of prepaid token billing using Stripe (webhooks, refunds, expiry, auto-replenish) for a public embedding API, running the requirements gathering, the design (including idempotency and reconciliation strategies), and the delivery through multi-environment testing. This unlocked self-serve billing in under 3 weeks where takara.ai previously only had enterprise billing.
-        \item Built observability and cost controls: ECS and Step Functions CloudWatch dashboards, Lambda reconciliation pipeline, SageMaker instance right-sizing; cut a client's SageMaker spend 67\% (\$1{,}730/month).
-        \item Built a domain-agnostic white-label agentic chatbot template from a production deployment; the next client went from zero to working product in one day, versus 3 weeks from scratch.
-        \item Delivered full-stack client AI products (AWS CDK, LangGraph/Bedrock agents, React, GitHub Actions) across 5 clients, including pre-sales technical architecture, demos, and support.
-        \item Designed and shipped Clerk device-code flow OAuth for IDE plugins, so users no longer manage API keys by hand, shaped directly from client feedback sessions.
-        \item Diagnosed and fixed a long-standing production WebSocket connection drop bug that only manifested in client AWS accounts, traced to an unset timeout in API Gateway.
+        \ifcvrole{product}{%
+            \item Led the end-to-end delivery of prepaid token billing using Stripe (webhooks, refunds, expiry, auto-replenish) for a public embedding API: requirements, design (idempotency and reconciliation), and multi-environment delivery. Unlocked self-serve billing in under 3 weeks, where takara.ai previously only had enterprise billing.
+            \item Built a domain-agnostic white-label chatbot template from a production deployment; the next client went from zero to a working product in one day, versus 3 weeks from scratch.
+            \item Delivered full-stack products across 5 clients (React, TypeScript, GitHub Actions, AWS CDK, LangGraph/Bedrock), including pre-sales architecture, demos, and support.
+            \item Designed and shipped Clerk device-code OAuth for IDE plugins from client feedback, so users no longer manage API keys by hand.
+            \item Diagnosed and fixed a long-standing production WebSocket drop that only appeared in client AWS accounts, traced to an unset API Gateway timeout.
+        }{%
+            \item Led the end-to-end delivery of prepaid token billing using Stripe (webhooks, refunds, expiry, auto-replenish) for a public embedding API, running the requirements gathering, the design (including idempotency and reconciliation strategies), and the delivery through multi-environment testing. This unlocked self-serve billing in under 3 weeks where takara.ai previously only had enterprise billing.
+            \item Built observability and cost controls: ECS and Step Functions CloudWatch dashboards, Lambda reconciliation pipeline, SageMaker instance right-sizing; cut a client's SageMaker spend 67\% (\$1{,}730/month).
+            \item Built a domain-agnostic white-label agentic chatbot template from a production deployment; the next client went from zero to working product in one day, versus 3 weeks from scratch.
+            \item Delivered full-stack client AI products (AWS CDK, LangGraph/Bedrock agents, React, GitHub Actions) across 5 clients, including pre-sales technical architecture, demos, and support.
+            \item Designed and shipped Clerk device-code flow OAuth for IDE plugins, so users no longer manage API keys by hand, shaped directly from client feedback sessions.
+            \item Diagnosed and fixed a long-standing production WebSocket connection drop bug that only manifested in client AWS accounts, traced to an unset timeout in API Gateway.
+        }
     \end{cvitems}
 
     \cventry
@@ -85,7 +99,11 @@
     {Jun 2025 - Present}
 
     \begin{cvitems}
-        \item Engaged on a 3-month contract to ship v1; retained as part-owner. Shipped a production-grade press-release platform in 6 weeks on an idempotent serverless AWS stack (Golang Lambdas, S3, CloudFront, DynamoDB, SQS) with a TypeScript/React app and Clerk auth/billing; launched at \$600 MRR in month 1 with zero production incidents; platform load-tested end-to-end at 40 press releases per second (40{,}000 emails), including email sending.
+        \ifcvrole{product}{%
+            \item Shipped a production press-release platform in 6 weeks on a 3-month contract, then retained as part-owner. TypeScript/React app with Clerk auth and billing on an idempotent serverless stack (Golang Lambdas, S3, CloudFront, DynamoDB, SQS); launched at \$600 MRR in month 1 with zero production incidents; load-tested at 40 press releases per second (40{,}000 emails).
+        }{%
+            \item Engaged on a 3-month contract to ship v1; retained as part-owner. Shipped a production-grade press-release platform in 6 weeks on an idempotent serverless AWS stack (Golang Lambdas, S3, CloudFront, DynamoDB, SQS) with a TypeScript/React app and Clerk auth/billing; launched at \$600 MRR in month 1 with zero production incidents; platform load-tested end-to-end at 40 press releases per second (40{,}000 emails), including email sending.
+        }
     \end{cvitems}
 
     \cventry
@@ -93,12 +111,20 @@
     {Feb 2025 - Jan 2026}
 
     \begin{cvitems}
-        \item Led product development from PoC to production: architecture, engineering standards, hiring input, and advising leadership.
-        \item Built email AI with a graph-based agentic workflow (Pydantic AI, Logfire, MCP) and RAG over a hotel knowledge base; eval-driven loops raised accuracy from 40\% to 90\%.
-        \item Shipped a React/TypeScript dashboard and FastAPI backend with GitLab multi-environment CI/CD, all while maintaining GDPR compliance as a fundamental design requirement.
-        \item Designed secure, declarative GCP infrastructure with Terraform (Cloud Run and related services); reduced cloud spend by 70\% through right-sizing, serverless, and service optimisation.
-        \item Instrumented the product with PostHog: event capture, dashboards, and B2B2C analytics used to steer delivery from stakeholder feedback which directly influenced the product roadmap.
-        \item Mentored three engineers in software delivery, who went on to ship a new hotel integration in two weeks after the first took 2 months to complete.
+        \ifcvrole{product}{%
+            \item Led the product from PoC to production: architecture, engineering standards, and advising leadership on what to build.
+            \item Shipped a React/TypeScript dashboard and FastAPI backend with GitLab multi-environment CI/CD, with GDPR as a design requirement.
+            \item Built email handling as a graph-based agent (Pydantic AI, Logfire, MCP) with RAG over a hotel knowledge base; eval-driven loops raised accuracy from 40\% to 90\%.
+            \item Instrumented PostHog (events, dashboards, B2B2C analytics) and used that stakeholder feedback to change the product roadmap.
+            \item Chose the runtime: declarative GCP with Terraform (Cloud Run), and cut cloud spend 70\% by right-sizing and moving to serverless.
+        }{%
+            \item Led product development from PoC to production: architecture, engineering standards, hiring input, and advising leadership.
+            \item Built email AI with a graph-based agentic workflow (Pydantic AI, Logfire, MCP) and RAG over a hotel knowledge base; eval-driven loops raised accuracy from 40\% to 90\%.
+            \item Shipped a React/TypeScript dashboard and FastAPI backend with GitLab multi-environment CI/CD, all while maintaining GDPR compliance as a fundamental design requirement.
+            \item Designed secure, declarative GCP infrastructure with Terraform (Cloud Run and related services); reduced cloud spend by 70\% through right-sizing, serverless, and service optimisation.
+            \item Instrumented the product with PostHog: event capture, dashboards, and B2B2C analytics used to steer delivery from stakeholder feedback which directly influenced the product roadmap.
+            \item Mentored three engineers in software delivery, who went on to ship a new hotel integration in two weeks after the first took 2 months to complete.
+        }
     \end{cvitems}
 
     \cventry
@@ -106,10 +132,16 @@
     {Sep 2023 - Feb 2025}
 
     \begin{cvitems}
-        \item Migrated four live applications from on-prem to AWS with under 5 minutes downtime each, embedded on-site with enterprise clients.
-        \item Championed a reusable CI/CD system adopted as the client standard for all 30 apps across 20+ teams (owned by the infra team); authored reusable GitLab Terraform state templates. Contributed pre-sales architecture.
-        \item Stood up Kubernetes on AWS with kubeadm and deployed a .NET microservices application (MySQL RDS, RabbitMQ, React Native) across dev, staging, and production for per-environment testing and rollout.
-        \item Diagnosed production .NET microservices failing Kubernetes health checks, where the only recovery was restarting kube-proxy and kubelet on the node; root-caused the failures to connections overflowing the conntrack table.
+        \ifcvrole{product}{%
+            \item Championed a reusable CI/CD system adopted as the client standard for 30 apps across 20+ teams, and authored reusable GitLab Terraform state templates.
+            \item Deployed a .NET microservices application and React Native client (MySQL RDS, RabbitMQ) across dev, staging, and production.
+            \item Migrated four live applications from on-prem to AWS with under 5 minutes downtime each, embedded on-site with enterprise clients.
+        }{%
+            \item Migrated four live applications from on-prem to AWS with under 5 minutes downtime each, embedded on-site with enterprise clients.
+            \item Championed a reusable CI/CD system adopted as the client standard for all 30 apps across 20+ teams (owned by the infra team); authored reusable GitLab Terraform state templates. Contributed pre-sales architecture.
+            \item Stood up Kubernetes on AWS with kubeadm and deployed a .NET microservices application (MySQL RDS, RabbitMQ, React Native) across dev, staging, and production for per-environment testing and rollout.
+            \item Diagnosed production .NET microservices failing Kubernetes health checks, where the only recovery was restarting kube-proxy and kubelet on the node; root-caused the failures to connections overflowing the conntrack table.
+        }
     \end{cvitems}
 
     \cventry
@@ -117,10 +149,15 @@
     {Sep 2021 - Sep 2022}
 
     \begin{cvitems}
-        \item Designed an EC2 launch system for CI/CD pipelines, achieving a 25\% time reduction per pipeline from 1 hour to 45 minutes.
-        \item Ported an internal headless Palo Alto VPN client from Linux to Windows, unblocking automated deployments across global sites.
-        \item First-line support for GitLab pipelines and Python/C\# tools; mentored two team members.
-        \item Authored and maintained SOC 2 compliance documentation used as a template across the department; audit passed.
+        \ifcvrole{product}{%
+            \item Designed an EC2 launch system for CI/CD pipelines, cutting pipeline time 25\% (1 hour to 45 minutes).
+            \item Ported an internal headless Palo Alto VPN client from Linux to Windows, unblocking automated deployments across global sites.
+        }{%
+            \item Designed an EC2 launch system for CI/CD pipelines, achieving a 25\% time reduction per pipeline from 1 hour to 45 minutes.
+            \item Ported an internal headless Palo Alto VPN client from Linux to Windows, unblocking automated deployments across global sites.
+            \item First-line support for GitLab pipelines and Python/C\# tools; mentored two team members.
+            \item Authored and maintained SOC 2 compliance documentation used as a template across the department; audit passed.
+        }
     \end{cvitems}
 
     \cvsection{Education}
@@ -145,21 +182,39 @@
     
     \cvsection{Notable Personal Projects}
 
-    \cventry
-    {Self-Hosted Home Lab}
-    {2016 - Present}
+    \ifcvrole{product}{%
+        \cventry
+        {Syncify: Spotify-approved playlist cloning tool}
+        {2022 - Present}
 
-    \begin{cvparagraph}
-        Production home infrastructure: family mail server, static sites, Gitea CI/CD, WireGuard VPN, Grafana, Nextcloud, OAuth2/OIDC, containerised apps with redundant backups. Linux, Proxmox, Kubernetes, Argo CD, Terraform, Docker Compose, AWS, Oracle Cloud, Cloudflare.
-    \end{cvparagraph}
+        \begin{cvparagraph}
+            Spotify Developer-approved app (Golang, HTMX) that clones a user's ``Liked Songs'' into a shareable playlist via the Spotify Web API (OAuth2). Open source on GitHub.
+        \end{cvparagraph}
 
-    \cventry
-    {Syncify: Spotify-approved playlist cloning tool}
-    {2022 - Present}
+        \cventry
+        {Self-Hosted Home Lab}
+        {2016 - Present}
 
-    \begin{cvparagraph}
-        Spotify Developer-approved app (Golang, HTMX) that clones a user's ``Liked Songs'' into a shareable playlist via the Spotify Web API (OAuth2). Open source on GitHub.
-    \end{cvparagraph}
+        \begin{cvparagraph}
+            Production home infrastructure: family mail server, static sites, Gitea CI/CD, WireGuard VPN, Grafana, Nextcloud, OAuth2/OIDC, containerised apps with redundant backups. Linux, Proxmox, Kubernetes, Argo CD, Terraform, Docker Compose, AWS, Oracle Cloud, Cloudflare.
+        \end{cvparagraph}
+    }{%
+        \cventry
+        {Self-Hosted Home Lab}
+        {2016 - Present}
+
+        \begin{cvparagraph}
+            Production home infrastructure: family mail server, static sites, Gitea CI/CD, WireGuard VPN, Grafana, Nextcloud, OAuth2/OIDC, containerised apps with redundant backups. Linux, Proxmox, Kubernetes, Argo CD, Terraform, Docker Compose, AWS, Oracle Cloud, Cloudflare.
+        \end{cvparagraph}
+
+        \cventry
+        {Syncify: Spotify-approved playlist cloning tool}
+        {2022 - Present}
+
+        \begin{cvparagraph}
+            Spotify Developer-approved app (Golang, HTMX) that clones a user's ``Liked Songs'' into a shareable playlist via the Spotify Web API (OAuth2). Open source on GitHub.
+        \end{cvparagraph}
+    }
 
     \cventry
     {Docker Mailserver (open source)}
@@ -186,7 +241,16 @@
     \cvsection{Skills}
 
     \begin{cvskills}
-        \ifcvrole{ai}{%
+        \ifcvrole{product}{%
+            \cvskill{Languages \& Tech}
+            {TypeScript, React, Golang, Python (FastAPI), PostgreSQL, MySQL, REST, WebSockets, C\#, React Native, RabbitMQ, SQS}
+
+            \cvskill{Cloud/DevOps}
+            {AWS (EC2, Lambda, S3, RDS, DynamoDB, CloudFront, ECS, Step Functions, IAM, VPC, CloudFormation, CDK), GCP (Cloud Run, Cloud SQL, Cloud Storage), Terraform, Docker, Kubernetes, Argo CD, CI/CD (GitLab, GitHub)}
+
+            \cvskill{AI/ML}
+            {LangGraph, Pydantic AI, Bedrock, AgentCore, SageMaker, RAG, MCP, OpenTelemetry, OpenAI}
+        }{\ifcvrole{ai}{%
             \cvskill{AI/ML}
             {LangGraph, Pydantic AI, Bedrock, AgentCore, SageMaker, RAG, MCP, OpenTelemetry, OpenAI}
 
@@ -198,10 +262,12 @@
 
             \cvskill{AI/ML}
             {LangGraph, Pydantic AI, Bedrock, AgentCore, SageMaker, RAG, MCP, OpenTelemetry, OpenAI}
-        }
+        }}
 
+        \ifcvrole{product}{}{%
         \cvskill{Languages \& Tech}
         {Golang, Python (FastAPI), TypeScript, C\#, React, React Native, REST, WebSockets, PostgreSQL, MySQL, RabbitMQ, SQS}
+        }
 
         \cvskill{Auth \& billing}
         {OAuth2/OIDC, Clerk, Stripe}

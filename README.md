@@ -4,7 +4,7 @@ One master file, [`keval-kapdee-cv.tex`](keval-kapdee-cv.tex). Role and location
 
 | Flag | Values | Default |
 | --- | --- | --- |
-| role | `general`, `cloud`, `ai` | `general` |
+| role | `general`, `cloud`, `ai`, `product` | `general` |
 | location | `malaysia`, `uk` | `malaysia` |
 
 ```bash

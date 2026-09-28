@@ -6,9 +6,9 @@ compile_one() {
   local location="$2"
 
   case "$role" in
-    general|cloud|ai) ;;
+    general|cloud|ai|product) ;;
     *)
-      echo "Unknown role: $role (general|cloud|ai)" >&2
+      echo "Unknown role: $role (general|cloud|ai|product)" >&2
       return 1
       ;;
   esac
@@ -37,7 +37,7 @@ compile_all() {
   local pid
   local fail=0
 
-  for role in general cloud ai; do
+  for role in general cloud ai product; do
     for location in malaysia uk; do
       compile_one "$role" "$location" &
       pids+=("$!")
