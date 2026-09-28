@@ -3,7 +3,6 @@ set -euo pipefail
 
 compile_one() {
   local role="$1"
-  local location="$2"
 
   case "$role" in
     general|cloud|ai) ;;
@@ -13,17 +12,9 @@ compile_one() {
       ;;
   esac
 
-  case "$location" in
-    malaysia|uk) ;;
-    *)
-      echo "Unknown location: $location (malaysia|uk)" >&2
-      return 1
-      ;;
-  esac
-
-  local job="keval-kapdee-cv-${role}-${location}"
-  local auxdir="out/aux/${role}-${location}"
-  local src="\\def\\cvrole{${role}}\\def\\cvlocation{${location}}\\input{keval-kapdee-cv.tex}"
+  local job="keval-kapdee-cv-${role}"
+  local auxdir="out/aux/${role}"
+  local src="\\def\\cvrole{${role}}\\input{keval-kapdee-cv.tex}"
 
   mkdir -p out "$auxdir"
   # TeX Live xelatex has no -aux-directory; keep aux/log here and move the PDF out.
@@ -38,10 +29,8 @@ compile_all() {
   local fail=0
 
   for role in general cloud ai; do
-    for location in malaysia uk; do
-      compile_one "$role" "$location" &
-      pids+=("$!")
-    done
+    compile_one "$role" &
+    pids+=("$!")
   done
 
   for pid in "${pids[@]}"; do
@@ -54,5 +43,5 @@ compile_all() {
 if [[ "${1:-}" == --all ]]; then
   compile_all
 else
-  compile_one "${1:-${ROLE:-general}}" "${2:-${LOCATION:-malaysia}}"
+  compile_one "${1:-${ROLE:-general}}"
 fi

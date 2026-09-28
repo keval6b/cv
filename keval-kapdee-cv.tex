@@ -3,14 +3,11 @@
 
 \documentclass[10pt, a4paper]{awesome-cv}
 
-% Variants: pass \def\cvrole{cloud}\def\cvlocation{uk} before \input, or use compile.sh.
+% Variants: pass \def\cvrole{cloud} before \input, or use compile.sh.
 % Roles: general (default) | cloud | ai
-% Locations: malaysia (default) | uk
 \providecommand{\cvrole}{general}
-\providecommand{\cvlocation}{malaysia}
 
 \newcommand{\ifcvrole}[3]{\ifthenelse{\equal{\cvrole}{#1}}{#2}{#3}}
-\newcommand{\ifcvlocation}[3]{\ifthenelse{\equal{\cvlocation}{#1}}{#2}{#3}}
 
 % tailwind green 800
 \definecolor{awesome}{HTML}{006530}
@@ -26,11 +23,7 @@
 }{%
     \position{Cloud \& AI Engineer}%
 }}
-\ifcvlocation{uk}{%
-    \address{London, UK | UK citizen | 1 month notice}%
-}{%
-    \address{London, UK | UK citizen | Open to relocation to Malaysia | 1 month notice}%
-}
+\address{London, UK | UK citizen | Remote, WFA, or Malaysia | 1 month notice}
 
 %\mobile{}
 \email{keval@kapdee.uk}
@@ -61,7 +54,7 @@
             Retained as part-owner by a client after shipping their v1 in 6 weeks.%
         }
         First-class Computer Science BSc, University of Nottingham. AWS DevOps Engineer Professional, Solutions Architect Associate.
-        \ifcvlocation{uk}{Seeking UK-based or remote}{Open to relocation to Malaysia for}
+        Open to UK-based roles, remote contracts, London hybrid with work-from-anywhere, or relocation to Malaysia for
         \ifcvrole{cloud}{ cloud/platform roles.}{\ifcvrole{ai}{ applied-AI infra roles.}{ cloud/platform or applied-AI infra roles.}}
     \end{cvparagraph}
 

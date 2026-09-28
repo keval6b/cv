@@ -1,14 +1,13 @@
 role := "general"
-location := "malaysia"
 
-compile role=role location=location:
-    ./compile.sh {{role}} {{location}}
+compile role=role:
+    ./compile.sh {{role}}
 
 compile-all:
     ./compile.sh --all
 
-docker role=role location=location:
-    docker run --rm -v ./:/wd --user $(id -u):$(id -g) -w /wd texlive/texlive ./compile.sh {{role}} {{location}}
+docker role=role:
+    docker run --rm -v ./:/wd --user $(id -u):$(id -g) -w /wd texlive/texlive ./compile.sh {{role}}
 
 docker-all:
     docker run --rm -v ./:/wd --user $(id -u):$(id -g) -w /wd texlive/texlive ./compile.sh --all

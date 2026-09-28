@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "freehire": {
+      "command": "pnpx",
+      "args": ["-y", "freehire-mcp"]
+    }
+  }
+}

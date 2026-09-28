@@ -16,20 +16,19 @@ jobs:
     strategy:
       matrix:
         role: [general, cloud, ai]
-        location: [malaysia, uk]
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v7
 
       - name: Build PDF
-        run: ./compile.sh ${{ matrix.role }} ${{ matrix.location }}
+        run: ./compile.sh ${{ matrix.role }}
 
       - name: Upload artifact
         uses: actions/upload-artifact@v7
         with:
-          name: keval-kapdee-cv-${{ matrix.role }}-${{ matrix.location }}
-          path: out/keval-kapdee-cv-${{ matrix.role }}-${{ matrix.location }}.pdf
+          name: keval-kapdee-cv-${{ matrix.role }}
+          path: out/keval-kapdee-cv-${{ matrix.role }}.pdf
           retention-days: 7
 
   release:
