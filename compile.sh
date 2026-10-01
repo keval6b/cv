@@ -5,16 +5,16 @@ compile_one() {
   local role="$1"
 
   case "$role" in
-    general|cloud|ai) ;;
+    uk|sg) ;;
     *)
-      echo "Unknown role: $role (general|cloud|ai)" >&2
+      echo "Unknown role: $role (uk|sg)" >&2
       return 1
       ;;
   esac
 
   local job="keval-kapdee-cv-${role}"
   local auxdir="out/aux/${role}"
-  local src="\\def\\cvrole{${role}}\\input{keval-kapdee-cv.tex}"
+  local src="\\def\\cvloc{${role}}\\input{keval-kapdee-cv.tex}"
 
   mkdir -p out "$auxdir"
   # TeX Live xelatex has no -aux-directory; keep aux/log here and move the PDF out.
@@ -28,7 +28,7 @@ compile_all() {
   local pid
   local fail=0
 
-  for role in general cloud ai; do
+  for role in uk sg; do
     compile_one "$role" &
     pids+=("$!")
   done

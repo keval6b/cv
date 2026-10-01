@@ -1,4 +1,4 @@
-role := "general"
+role := "uk"
 
 compile role=role:
     ./compile.sh {{role}}
