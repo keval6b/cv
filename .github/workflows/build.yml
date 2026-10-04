@@ -15,7 +15,7 @@ jobs:
       image: texlive/texlive:latest
     strategy:
       matrix:
-        role: [general, cloud, ai]
+        role: [platform, product]
 
     steps:
       - name: Checkout repository

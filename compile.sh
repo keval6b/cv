@@ -5,9 +5,9 @@ compile_one() {
   local role="$1"
 
   case "$role" in
-    general|cloud|ai) ;;
+    platform|product) ;;
     *)
-      echo "Unknown role: $role (general|cloud|ai)" >&2
+      echo "Unknown role: $role (platform|product)" >&2
       return 1
       ;;
   esac
@@ -28,7 +28,7 @@ compile_all() {
   local pid
   local fail=0
 
-  for role in general cloud ai; do
+  for role in platform product; do
     compile_one "$role" &
     pids+=("$!")
   done
@@ -43,5 +43,5 @@ compile_all() {
 if [[ "${1:-}" == --all ]]; then
   compile_all
 else
-  compile_one "${1:-${ROLE:-general}}"
+  compile_one "${1:-${ROLE:-}}"
 fi

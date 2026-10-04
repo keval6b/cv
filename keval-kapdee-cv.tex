@@ -3,9 +3,9 @@
 
 \documentclass[10pt, a4paper]{awesome-cv}
 
-% Variants: pass \def\cvrole{cloud} before \input, or use compile.sh.
-% Roles: general (default) | cloud | ai
-\providecommand{\cvrole}{general}
+% Variants: pass \def\cvrole{platform} before \input, or use compile.sh.
+% Roles: platform | product
+\providecommand{\cvrole}{platform}
 
 \newcommand{\ifcvrole}[3]{\ifthenelse{\equal{\cvrole}{#1}}{#2}{#3}}
 
@@ -16,13 +16,11 @@
 \setbool{acvSectionColorHighlight}{false}
 
 \name{Keval}{Kapdee}
-\ifcvrole{cloud}{%
+\ifcvrole{platform}{%
     \position{Cloud / Platform Engineer}%
-}{\ifcvrole{ai}{%
-    \position{Applied AI Engineer}%
 }{%
-    \position{Cloud \& AI Engineer}%
-}}
+    \position{Founding / Product Engineer}%
+}
 \address{London, UK | UK citizen | Remote, WFA, or Malaysia | 1 month notice}
 
 %\mobile{}
@@ -43,19 +41,18 @@
     \cvsection{Summary}
 
     \begin{cvparagraph}
-        \ifcvrole{cloud}{%
-            Cloud and platform engineer with 4+ years shipping production infrastructure. Cut cloud spend up to 70\%, migrated live applications to AWS with under 5 minutes downtime, and stood up Kubernetes on AWS with kubeadm for multi-environment rollout.%
+        \ifcvrole{platform}{%
+            Cloud and platform engineer with 4+ years shipping production infrastructure, including a year-in-industry placement.
+            Cut cloud spend by up to 70\%, migrated live applications to AWS with under 5 minutes downtime, and stood up Kubernetes on AWS with kubeadm for multi-environment rollout.
+            Championed a reusable CI/CD system adopted as the client standard for 30 apps across 20+ teams.
+            First-class Computer Science BSc, University of Nottingham. AWS DevOps Engineer Professional, Solutions Architect Associate.
+            Open to UK-based roles, remote contracts, London hybrid with work-from-anywhere, or relocation to Malaysia for cloud/platform roles.%
         }{%
-            Cloud and applied-AI engineer with 4+ years shipping production systems. Built LLM agents with eval-driven accuracy gains (40\% to 90\%), self-serve Stripe billing, and cut cloud spend up to 70\%.%
+            Founding and product engineer who ships production systems from zero to revenue: AWS, LLM products, and full-stack.
+            Retained as part-owner after a 3-month contract to ship v1. Took a press-release platform to \$600 MRR in month 1, raised LLM eval accuracy from 40\% to 90\%, and delivered self-serve Stripe billing in under 3 weeks.
+            First-class Computer Science BSc, University of Nottingham. AWS DevOps Engineer Professional, Solutions Architect Associate.
+            Open to UK-based roles, remote contracts, London hybrid with work-from-anywhere, or relocation to Malaysia for founding, product, or early-stage engineering roles.%
         }
-        \ifcvrole{cloud}{%
-            Championed a reusable CI/CD system adopted as the client standard for 30 apps across 20+ teams.%
-        }{%
-            Retained as part-owner by a client after shipping their v1 in 6 weeks.%
-        }
-        First-class Computer Science BSc, University of Nottingham. AWS DevOps Engineer Professional, Solutions Architect Associate.
-        Open to UK-based roles, remote contracts, London hybrid with work-from-anywhere, or relocation to Malaysia for
-        \ifcvrole{cloud}{ cloud/platform roles.}{\ifcvrole{ai}{ applied-AI infra roles.}{ cloud/platform or applied-AI infra roles.}}
     \end{cvparagraph}
 
     \cvsection{Experience}\label{experience}
@@ -65,16 +62,16 @@
     {Mar 2026 - Present}
 
     \begin{cvitems}
-        \item Led the end-to-end delivery of prepaid token billing using Stripe (webhooks, refunds, expiry, auto-replenish) for a public embedding API, running the requirements gathering, the design (including idempotency and reconciliation strategies), and the delivery through multi-environment testing. This unlocked self-serve billing in under 3 weeks where takara.ai previously only had enterprise billing.
-        \item Built observability and cost controls: ECS and Step Functions CloudWatch dashboards, Lambda reconciliation pipeline, SageMaker instance right-sizing; cut a client's SageMaker spend 67\% (\$1{,}730/month).
-        \item Built a domain-agnostic white-label agentic chatbot template from a production deployment; the next client went from zero to working product in one day, versus 3 weeks from scratch.
-        \item Delivered full-stack client AI products (AWS CDK, LangGraph/Bedrock agents, React, GitHub Actions) across 5 clients, including pre-sales technical architecture, demos, and support.
-        \item Designed and shipped Clerk device-code flow OAuth for IDE plugins, so users no longer manage API keys by hand, shaped directly from client feedback sessions.
-        \item Diagnosed and fixed a long-standing production WebSocket connection drop bug that only manifested in client AWS accounts, traced to an unset timeout in API Gateway.
+        \item Shipped prepaid Stripe token billing (webhooks, refunds, expiry, auto-replenish) for a public embedding API, unlocking self-serve billing in under 3 weeks where takara.ai previously had only enterprise billing.
+        \item Built ECS and Step Functions dashboards and a Lambda reconciliation pipeline; right-sized a client's SageMaker and cut spend 67\% (\$1{,}730/month).
+        \item Turned a production agentic chatbot into a white-label template; the next client went from zero to a working product in one day, versus 3 weeks from scratch.
+        \item Delivered full-stack client AI products (AWS CDK, LangGraph/Bedrock, React, GitHub Actions) across 5 clients, including pre-sales architecture, demos, and support.
+        \item Shipped Clerk device-code OAuth for IDE plugins so users no longer manage API keys by hand, shaped from client feedback.
+        \item Root-caused a production WebSocket drop that only appeared in client AWS accounts to an unset API Gateway timeout, and fixed it.
     \end{cvitems}
 
     \cventry
-    {Lead Engineer at ItsRaw.AI (part-time)}
+    {Lead Engineer at ItsRaw.AI\linebreak (contract, then part-time; concurrent with DreamDesk and takara.ai)}
     {Jun 2025 - Present}
 
     \begin{cvitems}
@@ -179,28 +176,25 @@
     \cvsection{Skills}
 
     \begin{cvskills}
-        \ifcvrole{ai}{%
-            \cvskill{AI/ML}
-            {LangGraph, Pydantic AI, Bedrock, AgentCore, SageMaker, RAG, MCP, OpenTelemetry, OpenAI}
+        \ifcvrole{platform}{%
+            \cvskill{Cloud}
+            {AWS (EC2, ECS, RDS, IAM, VPC, CloudFormation, CDK), GCP (Cloud Run), Terraform, Docker, Kubernetes, Argo CD, CI/CD (GitLab, GitHub)}
 
-            \cvskill{Cloud/DevOps}
-            {AWS (EC2, Lambda, S3, RDS, DynamoDB, CloudFront, ECS, Step Functions, IAM, VPC, CloudFormation, CDK), GCP (Cloud Run, Cloud SQL, Cloud Storage), Terraform, Docker, Kubernetes, Argo CD, CI/CD (GitLab, GitHub)}
+            \cvskill{Languages}
+            {Golang, Python, TypeScript, C\#}
+
+            \cvskill{Platform}
+            {Networking, Linux, WireGuard, Microservices, RabbitMQ, PostgreSQL, MySQL, OAuth2/OIDC, SOC 2, GDPR}
         }{%
-            \cvskill{Cloud/DevOps}
-            {AWS (EC2, Lambda, S3, RDS, DynamoDB, CloudFront, ECS, Step Functions, IAM, VPC, CloudFormation, CDK), GCP (Cloud Run, Cloud SQL, Cloud Storage), Terraform, Docker, Kubernetes, Argo CD, CI/CD (GitLab, GitHub)}
+            \cvskill{Product}
+            {TypeScript, React, Golang, Python (FastAPI), Stripe, Clerk, OAuth2/OIDC, REST, WebSockets}
 
-            \cvskill{AI/ML}
-            {LangGraph, Pydantic AI, Bedrock, AgentCore, SageMaker, RAG, MCP, OpenTelemetry, OpenAI}
+            \cvskill{AI}
+            {LangGraph, Pydantic AI, Bedrock, SageMaker, RAG, MCP}
+
+            \cvskill{Cloud}
+            {AWS (CDK, Lambda, S3, DynamoDB, CloudFront, SQS, API Gateway), GCP (Cloud Run), Terraform, CI/CD (GitLab, GitHub)}
         }
-
-        \cvskill{Languages \& Tech}
-        {Golang, Python (FastAPI), TypeScript, C\#, React, React Native, REST, WebSockets, PostgreSQL, MySQL, RabbitMQ, SQS}
-
-        \cvskill{Auth \& billing}
-        {OAuth2/OIDC, Clerk, Stripe}
-
-        \cvskill{Security \& infra}
-        {Networking, Linux, WireGuard, Microservices, SOC 2, GDPR}
     \end{cvskills}
 
 \end{document}
