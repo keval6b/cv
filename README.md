@@ -1,6 +1,6 @@
 # CV
 
-One master file, [`keval-kapdee-cv.tex`](keval-kapdee-cv.tex). Role is a compile-time flag; edit facts once and every PDF follows. Location is not a variant: every PDF says UK-based, remote, London hybrid with work-from-anywhere, or relocation to Malaysia.
+One master file, [`keval-kapdee-cv.tex`](keval-kapdee-cv.tex). Role is a compile-time flag; edit facts once and every PDF follows. Location is not a variant: every PDF says UK citizen, relocating to Malaysia, available near full-time as a contractor.
 
 | Role | Title |
 | --- | --- |
