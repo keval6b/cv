@@ -11,7 +11,7 @@ just watch               # rebuild both when a .tex file changes
 
 ## Applications
 
-The phone number for job forms is in `.private/phone`. That file is gitignored. Read it when a form asks for a phone number. Do not copy the number into tracked files or commits.
+Unpublished notes live in `.private/`. That directory is gitignored. Read it when a task needs them. Do not copy anything from it into tracked files, the CV, or commits.
 
 CV PDFs:
 
